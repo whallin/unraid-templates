@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://avatars.githubusercontent.com/u/56734956</Icon>
+  <Profile>
+    I create Unraid application templates aimed at being as close to the default experience of the Docker images as possible. My templates prioritize usability and simplicity, and I aim to provide a consistent experience across all of them.
+  </Profile>
+  <DonateLink>https://www.paypal.me/hallinmedia</DonateLink>
+  <DonateText>Appreciate my work? Consider donating!</DonateText>
+  <WebPage>https://hallin.media</WebPage>
+</Maintainer>

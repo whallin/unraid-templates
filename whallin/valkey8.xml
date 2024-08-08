@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>whallin-valkey8</Name>
+    <Overview>Valkey is a high-performance data structure server that primarily serves key/value workloads.</Overview>
+    <Category>Productivity: Network:Management</Category>
+	<Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>valkey/valkey:8-alpine</Repository>
+    <Registry>https://hub.docker.com/r/valkey/valkey/</Registry>
+    <Project>https://valkey.io/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--no-healthcheck</ExtraParams>
+    <PostArgs>valkey-server</PostArgs>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>sh</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/valkey.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/valkey8.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Valkey port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port Valkey listens on." Type="Port" Display="always" Required="false" Mask="false">6379</Config>
+    <!-- Volumes -->
+    <Config Name="Valkey storage" Target="/data" Default="/mnt/cache/appdata/valkey7" Mode="rw" Description="The location where Valkey stores its data." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/valkey7</Config>
+</Container>
+

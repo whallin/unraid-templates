@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>whallin-pgvecto-rs14</Name>
+    <Overview>Based on PostgreSQL 14: pgvecto.rs is a Postgres extension that provides vector similarity search functions.</Overview>
+    <Category>Productivity: Network:Management</Category>
+	<Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>tensorchord/pgvecto-rs:pg14-v0.3.0</Repository>
+    <Registry>https://hub.docker.com/r/tensorchord/pgvecto-rs</Registry>
+    <Project>https://pgvecto.rs/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>sh</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/pgvecto-rs.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/pgvecto-rs14.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="pgvecto-rs port" Target="5432" Default="5432" Mode="tcp" Description="The TCP port pgvecto-rs listens on." Type="Port" Display="always" Required="false" Mask="false">5432</Config>
+    <!-- Volumes -->
+    <Config Name="pgvecto-rs storage" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/pgvecto-rs14" Mode="rw" Description="The location where pgvecto-rs stores its data." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/pgvecto-rs14</Config>
+    <!-- Variables -->
+    <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This variable sets the pgvecto-rs superuser password." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="This variable creates a superuser and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data" Mode="" Description="This variable defines a subdirectory for the database files." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data</Config>
+</Container>
+

@@ -4,7 +4,7 @@
     <Name>whallin-postgres15</Name>
     <Overview>PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.</Overview>
     <Category>Productivity: Network:Management</Category>
-	<Beta>false</Beta>
+    <Beta>false</Beta>
     <!-- Image settings -->
     <Repository>postgres:15-alpine</Repository>
     <Registry>https://hub.docker.com/_/postgres/</Registry>

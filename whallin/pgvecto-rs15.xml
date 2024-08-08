@@ -4,7 +4,7 @@
     <Name>whallin-pgvecto-rs15</Name>
     <Overview>Based on pgvecto-rs 15: pgvecto.rs is a Postgres extension that provides vector similarity search functions.</Overview>
     <Category>Productivity: Network:Management</Category>
-	<Beta>false</Beta>
+    <Beta>false</Beta>
     <!-- Image settings -->
     <Repository>tensorchord/pgvecto-rs:pg15-v0.3.0</Repository>
     <Registry>https://hub.docker.com/r/tensorchord/pgvecto-rs</Registry>

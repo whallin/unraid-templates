@@ -11,7 +11,7 @@
     <Name>whallin-APPNAME</Name>
     <Overview>OVERVIEWTEXT</Overview>
     <Category>CACATEGORY</Category>
-	<Beta>false</Beta>
+    <Beta>false</Beta>
     <!-- Image settings -->
     <Repository>REPONAME</Repository>
     <Registry>REGISTRYURL</Registry>

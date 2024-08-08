@@ -26,6 +26,6 @@
     <!-- Ports -->
     <Config Name="Valkey port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port Valkey listens on." Type="Port" Display="always" Required="false" Mask="false">6379</Config>
     <!-- Volumes -->
-    <Config Name="Valkey storage" Target="/data" Default="/mnt/cache/appdata/valkey7" Mode="rw" Description="The location where Valkey stores its data." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/valkey7</Config>
+    <Config Name="Valkey storage" Target="/data" Default="/mnt/cache/appdata/valkey7" Mode="rw" Description="The location where Valkey stores its data." Type="Path" Display="always" Required="false" Mask="false" />
 </Container>
 

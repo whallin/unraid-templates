@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <Container version="2">
-	<!-- Replace 'APPNAME' with the name of the application -->
-	<!-- Replace 'CACATEGORY' with the CA category for the application -->
-	<!-- Replace 'REPONAME' with the image -->
-	<!-- Replace 'REGISTRYURL' with the image regsitry URL -->
-	<!-- Replace 'PROJECTURL' with the application project URL -->
-	<!-- Replace 'OVERVIEWTEXT' with the description of the application -->
-
+    <!-- Replace 'APPNAME' with the name of the application -->
+    <!-- Replace 'CACATEGORY' with the CA category for the application -->
+    <!-- Replace 'REPONAME' with the image -->
+    <!-- Replace 'REGISTRYURL' with the image regsitry URL -->
+    <!-- Replace 'PROJECTURL' with the application project URL -->
+    <!-- Replace 'OVERVIEWTEXT' with the description of the application -->
     <!-- App info -->
     <Name>whallin-APPNAME</Name>
     <Overview>OVERVIEWTEXT</Overview>

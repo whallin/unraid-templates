@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>whallin-teldrive-postgres16</Name>
+    <Overview>Based on PostgreSQL 16: PostgresSQL built with "PGroonga" &amp; "pgvector" made for use with Teldrive.</Overview>
+    <Category>Productivity: Network:Management</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/divyam234/postgres:16-alpine</Repository>
+    <Registry>https://github.com/divyam234/teldrive/pkgs/container/postgres</Registry>
+    <Project>https://github.com/divyam234/teldrive</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>sh</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/postgres.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/teldrive-postgres16.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="PostgreSQL port" Target="5432" Default="5432" Mode="tcp" Description="The TCP port PostgreSQL listens on." Type="Port" Display="always" Required="false" Mask="false">5432</Config>
+    <!-- Volumes -->
+    <Config Name="PostgresSQL storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/teldrive-postgres16" Mode="rw" Description="The location where PostgreSQL stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This variable sets the PostgreSQL superuser password." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="teldrive" Mode="" Description="This variable creates a superuser and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="postgres" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data" Mode="" Description="This variable defines a subdirectory for the database files." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data</Config>
+</Container>

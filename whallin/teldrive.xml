@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>whallin-teldrive</Name>
+    <Overview>Telegram Drive is a powerful utility that enables you to organise your telegram files and much more.</Overview>
+    <Category>Backup: Cloud:</Category>
+    <Beta>false</Beta>
+    <Requires>Teldrive needs:&#xD;
+    - A Telegram account with 1 bot from @BotFather&#xD;
+    - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector" (e.g. use the "whallin-teldrive-postgres16" template)&#xD;
+    - "session.db" &amp;amp; "config.toml" must be created and mapped to the container before starting Teldrive&#xD;
+    "config.toml" example file: https://github.com/divyam234/teldrive/blob/main/config.sample.toml</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/divyam234/teldrive:latest</Repository>
+    <Registry>https://github.com/divyam234/teldrive/pkgs/container/teldrive</Registry>
+    <Project>https://github.com/divyam234/teldrive</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+    <ExtraParams>--no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>sh</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/telegram.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/teldrive.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Teldrive web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port Teldrive listens on." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+    <!-- Volumes -->
+    <Config Name="Teldrive session database" Target="/session.db" Default="/mnt/user/appdata/teldrive/session.db" Mode="rw" Description="The location where Teldrive stores its sessions." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Teldrive config" Target="/config.toml" Default="/mnt/user/appdata/teldrive/config.toml" Mode="ro" Description="The location where Teldrive stores its config." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

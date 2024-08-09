@@ -2,7 +2,7 @@
 <Container version="2">
     <!-- App info -->
     <Name>whallin-teldrive-postgres16</Name>
-    <Overview>Based on PostgreSQL 16: PostgresSQL built with "PGroonga" &amp; "pgvector" made for use with Teldrive.</Overview>
+    <Overview>Based on PostgreSQL 16: PostgresSQL built with "PGroonga" &amp;amp; "pgvector" made for use with Teldrive.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
     <!-- Image settings -->

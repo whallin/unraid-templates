@@ -2,7 +2,7 @@
 <Container version="2">
     <!-- App info -->
     <Name>whallin-pgvecto-rs16</Name>
-    <Overview>Based on pgvecto-rs 16: pgvecto.rs is a Postgres extension that provides vector similarity search functions.</Overview>
+    <Overview>Based on PostgreSQL 16: pgvecto.rs is a Postgres extension that provides vector similarity search functions.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
     <!-- Image settings -->

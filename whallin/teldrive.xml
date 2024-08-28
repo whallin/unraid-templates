@@ -5,10 +5,10 @@
     <Overview>Telegram Drive is a powerful utility that enables you to organise your telegram files and much more.</Overview>
     <Category>Backup: Cloud:</Category>
     <Beta>false</Beta>
-    <Requires>Teldrive needs:&#xD;
-    - A Telegram account with 1 bot from @BotFather&#xD;
-    - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector" (e.g. use the "wh-teldrive-postgres16" template)&#xD;
-    - "session.db" &amp;amp; "config.toml" must be created and mapped to the container before starting Teldrive&#xD;
+    <Requires>Teldrive requires:&#xD;
+    - A Telegram account with 1 bot from @BotFather.&#xD;
+    - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector". (e.g. use the "wh-teldrive-postgres16" template)&#xD;
+    - "session.db" &amp;amp; "config.toml" must be created and mapped to the container before starting Teldrive.&#xD;
     "config.toml" example file: https://github.com/divyam234/teldrive/blob/main/config.sample.toml</Requires>
     <!-- Image settings -->
     <Repository>ghcr.io/divyam234/teldrive:latest</Repository>

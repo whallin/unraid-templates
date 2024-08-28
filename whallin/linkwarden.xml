@@ -2,7 +2,7 @@
 <Container version="2">
     <!-- App info -->
     <Name>wh-linkwarden</Name>
-    <Overview>Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and more...</Overview>
+    <Overview>Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and more.</Overview>
     <Category>Productivity: Tools: Other:</Category>
     <Beta>false</Beta>
     <!-- Image settings -->

@@ -15,7 +15,7 @@
     <WebUI>http://[IP]:[PORT:4449]/</WebUI>
     <ExtraParams>--cap-add NET_ADMIN --init --no-healthcheck</ExtraParams>
     <PostArgs>service --agreed-terms-and-conditions</PostArgs>
-    <Network>host</Network>
+    <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
     <Shell>bash</Shell>

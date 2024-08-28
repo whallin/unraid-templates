@@ -5,7 +5,8 @@
     <Overview>With MystNodes, you get paid in cryptocurrency every time a business or user connects to your node.</Overview>
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;MystNodes requires:&#xD;
+    <Requires>
+MystNodes requires:&#xD;
     - A "mystnodes.com" account.</Requires>
     <!-- Image settings -->
     <Repository>mysteriumnetwork/myst:latest-alpine</Repository>

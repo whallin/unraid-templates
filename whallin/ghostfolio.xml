@@ -5,7 +5,8 @@
     <Overview>Ghostfolio is a privacy-first, open source dashboard for your personal finances.</Overview>
     <Category>Productivity: Other:</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;Ghostfolio requires:&#xD;
+    <Requires>
+Ghostfolio requires:&#xD;
     - A PostgreSQL database.&#xD;
     - A Redis-compatibile database. (e.g. Redis, Valkey, KeyDB, DragonflyDB)</Requires>
     <!-- Image settings -->

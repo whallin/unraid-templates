@@ -5,7 +5,8 @@
     <Overview>Power tools for organizing your immich library.</Overview>
     <Category>Tools: MediaServer:Video MediaServer:Photos</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;Immich Power Tools requires:&#xD;
+    <Requires>
+Immich Power Tools requires:&#xD;
     - An Immich instance and an Immich API key.&#xD;
     Obtaining an Immich API key: https://immich.app/docs/features/command-line-interface/#obtain-the-api-key</Requires>
     <!-- Image settings -->

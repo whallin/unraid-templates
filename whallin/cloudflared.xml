@@ -5,7 +5,8 @@
     <Overview>Client for Cloudflare Tunnel, a daemon that exposes private services through the Cloudflare edge.</Overview>
     <Category>Network:Web Network:Proxy Network:Other</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;Cloudflared requires:&#xD;
+    <Requires>
+Cloudflared requires:&#xD;
     - A "cloudflare.com" account.&#xD;
     - Updating the container command with your Cloudflare Tunnel token.</Requires>
     <!-- Image settings -->

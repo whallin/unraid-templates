@@ -5,7 +5,8 @@
     <Overview>A modern replacement for Redis and Memcached.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;DragonflyDB requires:&#xD;
+    <Requires>
+DragonflyDB requires:&#xD;
     - (Optional) "Network Type" set to 'host' for improved performance.&#xD;
     Learn more about DragonflyDB in 'host' network mode: https://www.dragonflydb.io/docs/getting-started/docker-compose#tuning-dragonfly</Requires>
     <!-- Image settings -->

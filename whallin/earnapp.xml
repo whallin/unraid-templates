@@ -5,7 +5,8 @@
     <Overview>EarnApp is an app that pays you to refer friends to offers and share your device's unused resources.</Overview>
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
-    <Requires>&#xD;EarnApp requires:&#xD;
+    <Requires>
+EarnApp requires:&#xD;
     - An "earnapp.com" account.&#xD;
     - Running the command 'earnapp showid' in the container &amp;amp; registering the UUID on "earnapp.com".</Requires>
     <!-- Image settings -->

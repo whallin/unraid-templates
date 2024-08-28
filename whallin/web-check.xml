@@ -3,7 +3,7 @@
     <!-- App info -->
     <Name>wh-web-check</Name>
     <Overview>All-in-one OSINT tool for analysing any website.</Overview>
-    <Category>CACATEGORY</Category>
+    <Category>Security: Tools: Other: Network:Web Network:Management Network:Privacy Network:Other</Category>
     <Beta>false</Beta>
     <!-- Image settings -->
     <Repository>ghcr.io/lissy93/web-check:latest</Repository>

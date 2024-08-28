@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
     <!-- App info -->
-    <Name>whallin-teldrive</Name>
+    <Name>wh-teldrive</Name>
     <Overview>Telegram Drive is a powerful utility that enables you to organise your telegram files and much more.</Overview>
     <Category>Backup: Cloud:</Category>
     <Beta>false</Beta>
     <Requires>Teldrive needs:&#xD;
     - A Telegram account with 1 bot from @BotFather&#xD;
-    - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector" (e.g. use the "whallin-teldrive-postgres16" template)&#xD;
+    - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector" (e.g. use the "wh-teldrive-postgres16" template)&#xD;
     - "session.db" &amp;amp; "config.toml" must be created and mapped to the container before starting Teldrive&#xD;
     "config.toml" example file: https://github.com/divyam234/teldrive/blob/main/config.sample.toml</Requires>
     <!-- Image settings -->
@@ -20,7 +20,7 @@
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
-    <Shell>sh</Shell>
+    <Shell>bash</Shell>
     <!-- Template settings -->
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>

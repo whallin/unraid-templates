@@ -7,7 +7,7 @@
     <!-- Replace 'PROJECTURL' with the application project URL -->
     <!-- Replace 'OVERVIEWTEXT' with the description of the application -->
     <!-- App info -->
-    <Name>whallin-APPNAME</Name>
+    <Name>wh-APPNAME</Name>
     <Overview>OVERVIEWTEXT</Overview>
     <Category>CACATEGORY</Category>
     <Beta>false</Beta>
@@ -20,7 +20,7 @@
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
-    <Shell>sh</Shell>
+    <Shell>bash</Shell>
     <!-- Template settings -->
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <!-- App info -->
-    <Name>whallin-valkey8</Name>
+    <Name>wh-valkey8</Name>
     <Overview>Valkey is a high-performance data structure server that primarily serves key/value workloads.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
@@ -15,7 +15,7 @@
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
-    <Shell>sh</Shell>
+    <Shell>bash</Shell>
     <!-- Template settings -->
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>

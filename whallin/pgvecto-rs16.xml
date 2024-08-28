@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <!-- App info -->
-    <Name>whallin-pgvecto-rs16</Name>
+    <Name>wh-pgvecto-rs16</Name>
     <Overview>Based on PostgreSQL 16: pgvecto.rs is a Postgres extension that provides vector similarity search functions.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
@@ -14,7 +14,7 @@
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
-    <Shell>sh</Shell>
+    <Shell>bash</Shell>
     <!-- Template settings -->
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>

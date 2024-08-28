@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-apache-tika</Name>
+    <Overview>Apache Tika is a project of the Apache Software Foundation that detects and extracts metadata and text from over a thousand different file types.</Overview>
+    <Category>Productivity: Other: Network:Management</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>apache/tika:latest-full</Repository>
+    <Registry>https://hub.docker.com/r/apache/tika</Registry>
+    <Project>https://tika.apache.org/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/apache.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/apache-tika.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Tika port" Target="9998" Default="9998" Mode="tcp" Description="The TCP port Tika listens on." Type="Port" Display="always" Required="false" Mask="false">9998</Config>
+</Container>

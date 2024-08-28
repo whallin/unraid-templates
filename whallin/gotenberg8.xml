@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-gotenberg8</Name>
+    <Overview>A developer-friendly API for converting numerous document formats into PDF files, and more.</Overview>
+    <Category>Productivity: Other: Network:Management</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>gotenberg/gotenberg:8</Repository>
+    <Registry>https://hub.docker.com/r/gotenberg/gotenberg</Registry>
+    <Project>https://gotenberg.dev/</Project>
+    <!-- Docker settings -->
+    <PostArgs>gotenberg --chromium-disable-javascript=true --chromium-allow-list=file:///tmp/.*</PostArgs>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/gotenberg.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/gotenberg8.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Gotenberg port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Gotenberg listens on." Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+</Container>

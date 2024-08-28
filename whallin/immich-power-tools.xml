@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-immich-power-tools</Name>
+    <Overview>Power tools for organizing your immich library.</Overview>
+    <Category>Tools: MediaServer:Video MediaServer:Photos</Category>
+    <Beta>false</Beta>
+    <Requires>Immich Power Tools requires:&#xD;
+    - An Immich instance and an API key.&#xD;
+    Obtaining an Immich API key: https://immich.app/docs/features/command-line-interface/#obtain-the-api-key</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/varun-raj/immich-power-tools:latest</Repository>
+    <Registry>https://github.com/varun-raj/immich-power-tools/pkgs/container/immich-power-tools</Registry>
+    <Project>https://github.com/varun-raj/immich-power-tools</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/immich-power-tools.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/immich-power-tools.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Immich Power Tools web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Immich Power Tools listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Variables -->
+    <Config Name="IMMICH_API_KEY" Target="IMMICH_API_KEY" Default="" Mode="" Description="The API key for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="IMMICH_URL" Target="IMMICH_URL" Default="" Mode="" Description="The URL to your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="The PostgreSQL hostname for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DB_PORT" Target="DB_PORT" Default="5432" Mode="" Description="The PostgreSQL port for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+    <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="The PostgreSQL username for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="The PostgreSQL password for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="DB_DATABASE_NAME" Target="DB_DATABASE_NAME" Default="" Mode="" Description="The PostgreSQL database name for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>

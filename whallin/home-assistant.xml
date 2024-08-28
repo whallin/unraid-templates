@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-home-assistant</Name>
+    <Overview>Open source home automation that puts local control and privacy first.</Overview>
+    <Category>HomeAutomation:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/home-assistant/home-assistant:latest</Repository>
+    <Registry>https://github.com/home-assistant/core/pkgs/container/home-assistant</Registry>
+    <Project>https://www.home-assistant.io/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8123]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/home-assistant.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/home-assistant.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Home Assistant web UI port" Target="8123" Default="8123" Mode="tcp" Description="The TCP port Home Assistant listens on." Type="Port" Display="always" Required="true" Mask="false">8123</Config>
+    <!-- Volumes -->
+    <Config Name="Home Assistant storage" Target="/cache" Default="/mnt/user/appdata/home-assistant" Mode="rw" Description="The location where Home Assistant stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

@@ -6,8 +6,8 @@
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>Pawns requires:&#xD;
-    - An "pawns.app" account&#xD;
-    - Updating the container command with your "pawns.app" credentials</Requires>
+    - An "pawns.app" account.&#xD;
+    - Updating the container command with your "pawns.app" credentials.</Requires>
     <!-- Image settings -->
     <Repository>iproyal/pawns-cli:latest</Repository>
     <Registry>https://hub.docker.com/r/iproyal/pawns-cli</Registry>

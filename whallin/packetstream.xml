@@ -6,7 +6,7 @@
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>PacketStream requires:&#xD;
-    - A "packetstream.io" account</Requires>
+    - A "packetstream.io" account.</Requires>
     <!-- Image settings -->
     <Repository>packetstream/psclient:latest</Repository>
     <Registry>https://hub.docker.com/r/packetstream/psclient</Registry>

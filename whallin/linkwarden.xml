@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-linkwarden</Name>
+    <Overview>Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and more...</Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/linkwarden/linkwarden:latest</Repository>
+    <Registry>https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden</Registry>
+    <Project>https://linkwarden.app/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/linkwarden.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/linkwarden.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Linkwarden web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Linkwarden listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="Linkwarden storage" Target="/data/data" Default="/mnt/user/appdata/linkwarden" Mode="rw" Description="The location where Linkwarden stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="NEXTAUTH_SECRET" Target="NEXTAUTH_SECRET" Default="" Mode="" Description="Secret phrase used by NextAuth." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgresql://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="NEXTAUTH_URL" Target="NEXTAUTH_URL" Default="http://localhost:3000/api/v1/auth" Mode="" Description="Change the variable to your domain name only if you are hosting Linkwarden elsewhere." Type="Variable" Display="advanced" Required="true" Mask="false">http://localhost:3000/api/v1/auth</Config>
+</Container>

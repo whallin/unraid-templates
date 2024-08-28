@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-homepage</Name>
+    <Overview>A highly customizable homepage (or startpage/application dashboard) with Docker and service API integrations.</Overview>
+    <Category>Productivity: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/gethomepage/homepage:latest</Repository>
+    <Registry>https://github.com/gethomepage/homepage/pkgs/container/homepage</Registry>
+    <Project>https://gethomepage.dev/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/homepage.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/homepage.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Homepage web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Homepage listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="Homepage storage" Target="/app/config" Default="/mnt/user/appdata/homepage" Mode="rw" Description="The location where Homepage stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Docker daemon socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="An entry point for the Docker API." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>

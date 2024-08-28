@@ -5,13 +5,16 @@
     <Overview>A modern replacement for Redis and Memcached.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
+    <Requires>DragonflyDB requires:&#xD;
+    - (Optional) "Network Type" set to 'host' for improved performance.&#xD;
+    Learn more about DragonflyDB in 'host' network mode: https://www.dragonflydb.io/docs/getting-started/docker-compose#tuning-dragonfly</Requires>
     <!-- Image settings -->
     <Repository>ghcr.io/dragonflydb/dragonfly:latest</Repository>
     <Registry>https://github.com/dragonflydb/dragonfly/pkgs/container/dragonfly</Registry>
     <Project>https://www.dragonflydb.io/</Project>
     <!-- Docker settings -->
     <ExtraParams>--ulimit memlock=-1 --init --no-healthcheck</ExtraParams>
-    <Network>host</Network>
+    <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
     <Shell>bash</Shell>

@@ -6,8 +6,8 @@
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>Honeygain requires:&#xD;
-    - A "honeygain.com" account&#xD;
-    - Updating the container command with your "honeygain.com" credentials</Requires>
+    - A "honeygain.com" account.&#xD;
+    - Updating the container command with your "honeygain.com" credentials.</Requires>
     <!-- Image settings -->
     <Repository>honeygain/honeygain:latest</Repository>
     <Registry>https://hub.docker.com/r/honeygain/honeygain</Registry>

@@ -6,7 +6,7 @@
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>MystNodes requires:&#xD;
-    - A "mystnodes.com" account</Requires>
+    - A "mystnodes.com" account.</Requires>
     <!-- Image settings -->
     <Repository>mysteriumnetwork/myst:latest-alpine</Repository>
     <Registry>https://hub.docker.com/r/mysteriumnetwork/myst</Registry>

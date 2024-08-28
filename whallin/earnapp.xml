@@ -5,7 +5,7 @@
     <Overview>EarnApp is an app that pays you to refer friends to offers and share your device's unused resources.</Overview>
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
-    <Requires>EarnApp requires:&#xD;
+    <Requires>&#xD;EarnApp requires:&#xD;
     - An "earnapp.com" account.&#xD;
     - Running the command 'earnapp showid' in the container &amp;amp; registering the UUID on "earnapp.com".</Requires>
     <!-- Image settings -->
@@ -26,6 +26,6 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/earnapp.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Volumes -->
-    <Config Name="EarnApp storage" Target="/etc/earnapp" Default="/mnt/user/appdata/earnapp" Mode="rw" Description="The location where EarnApp stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="EarnApp storage" Target="/etc/earnapp" Default="/mnt/user/appdata/wh-earnapp" Mode="rw" Description="The location where EarnApp stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="EarnApp UUID" Target="/sys/fs/cgroup" Default="/sys/fs/cgroup" Mode="ro" Description="Read-only path for the container to generate a UUID." Type="Path" Display="advanced" Required="true" Mask="false">/sys/fs/cgroup</Config>
 </Container>

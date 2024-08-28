@@ -5,7 +5,7 @@
     <Overview>PacketStream is a peer-to-peer proxy network that enables users to access data and content from any location.</Overview>
     <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
-    <Requires>PacketStream requires:&#xD;
+    <Requires>&#xD;PacketStream requires:&#xD;
     - A "packetstream.io" account.</Requires>
     <!-- Image settings -->
     <Repository>packetstream/psclient:latest</Repository>

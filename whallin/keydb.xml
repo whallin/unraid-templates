@@ -6,9 +6,18 @@
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
     <!-- Image settings -->
-    <Repository>eqalpha/keydb:alpine</Repository>
+    <Repository>eqalpha/keydb:latest</Repository>
     <Registry>https://hub.docker.com/r/eqalpha/keydb</Registry>
     <Project>https://docs.keydb.dev/</Project>
+    <!-- Branch settings -->
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Default image</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>alpine</Tag>
+        <TagDescription>Experimental, but smaller image size</TagDescription>
+    </Branch>
     <!-- Docker settings -->
     <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
@@ -25,5 +34,5 @@
     <!-- Ports -->
     <Config Name="KeyDB port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port KeyDB listens on." Type="Port" Display="always" Required="false" Mask="false">6379</Config>
     <!-- Volumes -->
-    <Config Name="KeyDB storage" Target="/data" Default="/mnt/user/appdata/keydb" Mode="rw" Description="The location where KeyDB stores its data." Type="Path" Display="always" Required="false" Mask="false" />
+    <Config Name="KeyDB storage" Target="/data" Default="/mnt/user/appdata/wh-keydb" Mode="rw" Description="The location where KeyDB stores its data." Type="Path" Display="always" Required="false" Mask="false" />
 </Container>

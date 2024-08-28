@@ -26,6 +26,6 @@
     <!-- Ports -->
     <Config Name="Homepage web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Homepage listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <!-- Volumes -->
-    <Config Name="Homepage storage" Target="/app/config" Default="/mnt/user/appdata/homepage" Mode="rw" Description="The location where Homepage stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Homepage storage" Target="/app/config" Default="/mnt/user/appdata/wh-homepage" Mode="rw" Description="The location where Homepage stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Docker daemon socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="An entry point for the Docker API." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
 </Container>

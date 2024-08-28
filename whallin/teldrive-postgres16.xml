@@ -25,7 +25,7 @@
     <!-- Ports -->
     <Config Name="PostgreSQL port" Target="5432" Default="5432" Mode="tcp" Description="The TCP port PostgreSQL listens on." Type="Port" Display="always" Required="false" Mask="false">5432</Config>
     <!-- Volumes -->
-    <Config Name="PostgreSQL storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/teldrive-postgres16" Mode="rw" Description="The location where PostgreSQL stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="PostgreSQL storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/wh-teldrive-postgres16" Mode="rw" Description="The location where PostgreSQL stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This variable sets the PostgreSQL superuser password." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="teldrive" Mode="" Description="This variable creates a superuser and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false"/>

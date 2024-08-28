@@ -26,5 +26,5 @@
     <!-- Ports -->
     <Config Name="Actual web UI port" Target="5006" Default="5006" Mode="tcp" Description="The TCP port Actual listens on." Type="Port" Display="always" Required="true" Mask="false">5006</Config>
     <!-- Volumes -->
-    <Config Name="Actual storage" Target="/data" Default="/mnt/user/appdata/actual" Mode="rw" Description="The location where Actual stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Actual storage" Target="/data" Default="/mnt/user/appdata/wh-actual" Mode="rw" Description="The location where Actual stores its data." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

@@ -26,5 +26,5 @@
     <!-- Ports -->
     <Config Name="Home Assistant web UI port" Target="8123" Default="8123" Mode="tcp" Description="The TCP port Home Assistant listens on." Type="Port" Display="always" Required="true" Mask="false">8123</Config>
     <!-- Volumes -->
-    <Config Name="Home Assistant storage" Target="/cache" Default="/mnt/user/appdata/home-assistant" Mode="rw" Description="The location where Home Assistant stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Home Assistant storage" Target="/cache" Default="/mnt/user/appdata/wh-home-assistant" Mode="rw" Description="The location where Home Assistant stores its data." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

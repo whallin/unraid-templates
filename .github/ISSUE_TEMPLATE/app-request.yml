@@ -1,0 +1,33 @@
+name: Request a template
+description: Convert an application into an Unraid template.
+labels: [feature request]
+body:
+  - type: input
+    validations:
+      required: true
+    attributes:
+      label: "Application link"
+      description: "Provide a URL to the application you want a template for."
+
+  - type: textarea
+    validations:
+      required: false
+    attributes:
+      label: "Version"
+      description: "If multiple versions of the application are available, please describe which one you'd like used."
+
+  - type: textarea
+    validations:
+      required: false
+    attributes:
+      label: "Additional template features"
+      description: "In as much detail as possible, please describe any specific features you'd like to see added to the template."
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing request for this?
+      options:
+        - label: I have searched for existing requests before opening this request.
+          required: true
+        - label: I have provided all relevant details to begin the development process.
+          required: true

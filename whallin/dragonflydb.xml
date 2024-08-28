@@ -5,7 +5,7 @@
     <Overview>A modern replacement for Redis and Memcached.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
-    <Requires>DragonflyDB requires:&#xD;
+    <Requires>&#xD;DragonflyDB requires:&#xD;
     - (Optional) "Network Type" set to 'host' for improved performance.&#xD;
     Learn more about DragonflyDB in 'host' network mode: https://www.dragonflydb.io/docs/getting-started/docker-compose#tuning-dragonfly</Requires>
     <!-- Image settings -->
@@ -28,5 +28,5 @@
     <!-- Ports -->
     <Config Name="DragonflyDB port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port DragonflyDB listens on." Type="Port" Display="always" Required="false" Mask="false">6379</Config>
     <!-- Volumes -->
-    <Config Name="DragonflyDB storage" Target="/data" Default="/mnt/user/appdata/dragonflydb" Mode="rw" Description="The location where DragonflyDB stores its data." Type="Path" Display="always" Required="false" Mask="false" />
+    <Config Name="DragonflyDB storage" Target="/data" Default="/mnt/user/appdata/wh-dragonflydb" Mode="rw" Description="The location where DragonflyDB stores its data." Type="Path" Display="always" Required="false" Mask="false" />
 </Container>

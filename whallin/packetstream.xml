@@ -3,7 +3,7 @@
     <!-- App info -->
     <Name>wh-packetstream</Name>
     <Overview>PacketStream is a peer-to-peer proxy network that enables users to access data and content from any location.</Overview>
-    <Category>Crypto: Other:</Category>
+    <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>PacketStream requires:&#xD;
     - A "packetstream.io" account</Requires>

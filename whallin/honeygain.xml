@@ -3,7 +3,7 @@
     <!-- App info -->
     <Name>wh-honeygain</Name>
     <Overview>Honeygain is the first-ever app that allows users to make money online by sharing their internet connection.</Overview>
-    <Category>Crypto: Other:</Category>
+    <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>Honeygain requires:&#xD;
     - A "honeygain.com" account&#xD;

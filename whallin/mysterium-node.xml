@@ -3,7 +3,7 @@
     <!-- App info -->
     <Name>wh-mysterium-node</Name>
     <Overview>With MystNodes, you get paid in cryptocurrency every time a business or user connects to your node.</Overview>
-    <Category>Crypto: Other:</Category>
+    <Category>Crypto: Other: Network:Other</Category>
     <Beta>false</Beta>
     <Requires>MystNodes requires:&#xD;
     - A "mystnodes.com" account</Requires>

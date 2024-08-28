@@ -30,5 +30,4 @@
     <Config Name="MystNode web UI port" Target="4449" Default="4449" Mode="tcp" Description="The TCP port MystNode listens on." Type="Port" Display="always" Required="true" Mask="false">4449</Config>
     <!-- Volumes -->
     <Config Name="MystNode storage" Target="/var/lib/mysterium-node" Default="/mnt/user/appdata/mysterium-node" Mode="rw" Description="The location where MystNode stores its data." Type="Path" Display="always" Required="true" Mask="false" />
-    <!-- Variables -->
 </Container>

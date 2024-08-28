@@ -25,8 +25,8 @@
     <!-- Ports -->
     <Config Name="CouchDB port" Target="5984" Default="5984" Mode="tcp" Description="The TCP port CouchDB listens on." Type="Port" Display="always" Required="false" Mask="false">5984</Config>
     <!-- Volumes -->
-    <Config Name="CouchDB storage" Target="/opt/couchdb/data" Default="/mnt/user/appdata/couchdb2/data" Mode="rw" Description="The location where CouchDB stores its data." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="CouchDB configuration" Target="/opt/couchdb/etc/local.d" Default="/mnt/user/appdata/couchdb2/local.d" Mode="rw" Description="The location where CouchDB stores its configuration." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="CouchDB storage" Target="/opt/couchdb/data" Default="/mnt/user/appdata/couchdb3/data" Mode="rw" Description="The location where CouchDB stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="CouchDB configuration" Target="/opt/couchdb/etc/local.d" Default="/mnt/user/appdata/couchdb3/local.d" Mode="rw" Description="The location where CouchDB stores its configuration." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="COUCHDB_PASSWORD" Target="COUCHDB_PASSWORD" Default="" Mode="" Description="This variable sets the CouchDB admin password." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="COUCHDB_USER" Target="COUCHDB_USER" Default="postgres" Mode="" Description="This variable sets the CouchDB admin username." Type="Variable" Display="always" Required="false" Mask="false"/>

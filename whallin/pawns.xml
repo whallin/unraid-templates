@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-pawns</Name>
+    <Overview>Pawns.app is an app that pays you to use your internet connection and complete surveys.</Overview>
+    <Category>Crypto: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>Pawns requires:&#xD;
+    - An "pawns.app" account&#xD;
+    - Updating the container command with your "pawns.app" credentials</Requires>
+    <!-- Image settings -->
+    <Repository>iproyal/pawns-cli:latest</Repository>
+    <Registry>https://hub.docker.com/r/iproyal/pawns-cli</Registry>
+    <Project>https://pawns.app/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <PostArgs>-email=ACCOUNT_EMAIL -password=ACCOUNT_PASS -device-name=DEVICE_NAME -accept-tos</PostArgs>
+    <Network>host</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/pawns.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/pawns.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+</Container>

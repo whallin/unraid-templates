@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-honeygain</Name>
+    <Overview>Honeygain is the first-ever app that allows users to make money online by sharing their internet connection.</Overview>
+    <Category>Crypto: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>Honeygain requires:&#xD;
+    - A "honeygain.com" account&#xD;
+    - Updating the container command with your "honeygain.com" credentials</Requires>
+    <!-- Image settings -->
+    <Repository>honeygain/honeygain:latest</Repository>
+    <Registry>https://hub.docker.com/r/honeygain/honeygain</Registry>
+    <Project>https://www.honeygain.com/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <PostArgs>-email ACCOUNT_EMAIL -pass ACCOUNT_PASS -device DEVICE_NAME -tou-accept</PostArgs>
+    <Network>host</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/honeygain.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/honeygain.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+</Container>

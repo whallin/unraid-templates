@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-earnapp</Name>
+    <Overview>EarnApp is an app that pays you to refer friends to offers and share your device's unused resources.</Overview>
+    <Category>Crypto: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>EarnApp requires:&#xD;
+    - An "earnapp.com" account&#xD;
+    - Running the command 'earnapp showid' in the container &amp;amp; registering the UUID on "earnapp.com"</Requires>
+    <!-- Image settings -->
+    <Repository>fazalfarhan01/earnapp:latest</Repository>
+    <Registry>https://hub.docker.com/r/fazalfarhan01/earnapp</Registry>
+    <Project>https://earnapp.com/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>host</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/earnapp.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/earnapp.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Volumes -->
+    <Config Name="EarnApp storage" Target="/etc/earnapp" Default="/mnt/user/appdata/earnapp" Mode="rw" Description="The location where EarnApp stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="EarnApp UUID" Target="/sys/fs/cgroup" Default="/sys/fs/cgroup" Mode="ro" Description="Read-only path for the container to generate a UUID." Type="Path" Display="advanced" Required="true" Mask="false">/sys/fs/cgroup</Config>
+</Container>

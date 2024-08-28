@@ -10,7 +10,7 @@
     <Registry>https://hub.docker.com/r/tensorchord/pgvecto-rs</Registry>
     <Project>https://pgvecto.rs/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
@@ -32,4 +32,3 @@
     <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="postgres" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data" Mode="" Description="This variable defines a subdirectory for the database files." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data</Config>
 </Container>
-

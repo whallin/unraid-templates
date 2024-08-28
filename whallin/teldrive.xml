@@ -16,7 +16,7 @@
     <Project>https://github.com/divyam234/teldrive</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

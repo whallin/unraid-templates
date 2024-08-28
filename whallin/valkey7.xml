@@ -10,7 +10,7 @@
     <Registry>https://hub.docker.com/r/valkey/valkey/</Registry>
     <Project>https://valkey.io/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <PostArgs>valkey-server</PostArgs>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
@@ -28,4 +28,3 @@
     <!-- Volumes -->
     <Config Name="Valkey storage" Target="/data" Default="/mnt/user/appdata/valkey7" Mode="rw" Description="The location where Valkey stores its data." Type="Path" Display="always" Required="false" Mask="false" />
 </Container>
-

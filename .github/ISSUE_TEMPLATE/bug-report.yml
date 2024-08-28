@@ -1,0 +1,41 @@
+name: Report a bug
+description: Something isn't working quite as expected.
+labels: [bug, not confirmed]
+body:
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: "Expected behavior"
+      description: "Please describe what you expected to happen."
+
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: "Current behavior"
+      description: "What is happening instead of the expected behavior?"
+
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: "Reproduction steps"
+      description: "Please be as detailed as possible when providing steps to reproduce, failure to provide steps will result in this issue being closed."
+
+  - type: textarea
+    attributes:
+      label: "Relevant logs"
+      description: Please submit any relevant logs. This will be automatically formatted into code—no need for backticks.
+      render: shell
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      options:
+        - label: I have searched for existing issues before opening this issue.
+          required: true
+        - label: I have provided all relevant details to begin troubleshooting of this issue.
+          required: true
+        - label: I have contacted the application developer(s) to confirm what I am expericing isn't only a problem on my end.
+          required: true

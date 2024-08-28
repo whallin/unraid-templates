@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-actual</Name>
+    <Overview>Actual is a local-first personal finance tool.</Overview>
+    <Category>Productivity: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/actualbudget/actual-server:latest-alpine</Repository>
+    <Registry>https://github.com/actualbudget/actual-server/pkgs/container/actual-server</Registry>
+    <Project>https://actualbudget.org/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:5006]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/actual-budget.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/actual-budget.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Actual web UI port" Target="5006" Default="5006" Mode="tcp" Description="The TCP port Actual listens on." Type="Port" Display="always" Required="true" Mask="false">5006</Config>
+    <!-- Volumes -->
+    <Config Name="Actual storage" Target="/data" Default="/mnt/user/appdata/actual" Mode="rw" Description="The location where Actual stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

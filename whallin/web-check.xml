@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-web-check</Name>
+    <Overview>All-in-one OSINT tool for analysing any website.</Overview>
+    <Category>CACATEGORY</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/lissy93/web-check:latest</Repository>
+    <Registry>https://github.com/Lissy93/web-check/pkgs/container/web-check</Registry>
+    <Project>https://web-check.xyz/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/web-check.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/web-check.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Web-Check web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Web-Check listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Variables -->
+    <Config Name="API_CORS_ORIGIN" Target="API_CORS_ORIGIN" Default="" Mode="" Description="Enable CORS, by setting your allowed hostname(s)." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="BUILT_WITH_API_KEY" Target="BUILT_WITH_API_KEY" Default="" Mode="" Description="A BuiltWith API key. This will show the main features of a site." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="CLOUDMERSIVE_API_KEY" Target="CLOUDMERSIVE_API_KEY" Default="" Mode="" Description="API key for Cloudmersive. This will show known threats associated with the IP." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="GOOGLE_CLOUD_API_KEY" Target="GOOGLE_CLOUD_API_KEY" Default="" Mode="" Description="A Google API key. This can be used to return quality metrics for a site." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="REACT_APP_SHODAN_API_KEY" Target="REACT_APP_SHODAN_API_KEY" Default="" Mode="" Description="A Shodan API key. This will show associated host names for a given domain." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="REACT_APP_WHO_API_KEY" Target="REACT_APP_WHO_API_KEY" Default="" Mode="" Description="A WhoAPI key. This will show more comprehensive WhoIs records than the default job." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="SECURITY_TRAILS_API_KEY" Target="SECURITY_TRAILS_API_KEY" Default="" Mode="" Description="A Security Trails API key. This will show org info associated with the IP." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="TORRENT_IP_API_KEY" Target="TORRENT_IP_API_KEY" Default="" Mode="" Description="A torrent API key. This will show torrents downloaded by an IP." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="TRANCO_USERNAME" Target="TRANCO_USERNAME" Default="" Mode="" Description="A Tranco email. This will show the rank of a site, based on traffic." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="TRANCO_API_KEY" Target="TRANCO_API_KEY" Default="" Mode="" Description="A Tranco API key. This will show the rank of a site, based on traffic." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>

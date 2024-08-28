@@ -10,7 +10,7 @@
     <Registry>https://github.com/divyam234/teldrive/pkgs/container/postgres</Registry>
     <Project>https://github.com/divyam234/teldrive</Project>
     <!-- Docker settings -->
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

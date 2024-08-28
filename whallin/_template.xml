@@ -16,7 +16,7 @@
     <Registry>REGISTRYURL</Registry>
     <Project>PROJECTURL</Project>
     <!-- Docker settings -->
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

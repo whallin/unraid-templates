@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-mysterium-node</Name>
+    <Overview>With MystNodes, you get paid in cryptocurrency every time a business or user connects to your node.</Overview>
+    <Category>Crypto: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>MystNodes requires:&#xD;
+    - A "mystnodes.com" account</Requires>
+    <!-- Image settings -->
+    <Repository>mysteriumnetwork/myst:latest-alpine</Repository>
+    <Registry>https://hub.docker.com/r/mysteriumnetwork/myst</Registry>
+    <Project>https://www.mystnodes.com/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:4449]/</WebUI>
+    <ExtraParams>--cap-add NET_ADMIN --init --no-healthcheck</ExtraParams>
+    <PostArgs>service --agreed-terms-and-conditions</PostArgs>
+    <Network>host</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/mysterium.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/mysterium-node.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="MystNode web UI port" Target="4449" Default="4449" Mode="tcp" Description="The TCP port MystNode listens on." Type="Port" Display="always" Required="true" Mask="false">4449</Config>
+    <!-- Volumes -->
+    <Config Name="MystNode storage" Target="/var/lib/mysterium-node" Default="/mnt/user/appdata/mysterium-node" Mode="rw" Description="The location where MystNode stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+</Container>

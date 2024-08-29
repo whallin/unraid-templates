@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <RemoveFromCA>true</RemoveFromCA>
+    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-postgres15</Name>
     <Overview>PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.</Overview>

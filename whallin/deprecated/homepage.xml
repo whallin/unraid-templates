@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <RemoveFromCA>true</RemoveFromCA>
+    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-homepage</Name>
     <Overview>A highly customizable homepage (or startpage/application dashboard) with Docker and service API integrations.</Overview>

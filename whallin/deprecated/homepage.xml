@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <!-- Why depercated? Too many similiar templates on the CA -->
     <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-homepage</Name>

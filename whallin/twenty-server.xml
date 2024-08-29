@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-twenty-server</Name>
+    <Overview>Building a modern alternative to Salesforce, powered by the community. </Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Twenty Server requires:&#xD;
+- A PostgreSQL database with "pg_graphql" &amp;amp; "Supabase Wrappers". (e.g. use the "wh-twenty-postgres15" template)&#xD;
+- 'chown':ing the storage directory to 1000:1000. (e.g. 'chown -R 1000:1000 /mnt/user/appdata/wh-twenty-server')</Requires>
+    <!-- Image settings -->
+    <Repository>twentycrm/twenty:latest</Repository>
+    <Registry>https://hub.docker.com/r/twentycrm/twenty</Registry>
+    <Project>https://twenty.com/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/twenty.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/twenty-server.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Twenty web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Twenty listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="Twenty local data" Target="/app/packages/twenty-server/.local-storage" Default="/mnt/user/appdata/wh-twenty-server/local" Mode="rw" Description="The location where Twenty stores uploaded data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Twenty Docker data" Target="/app/docker-data" Default="/mnt/user/appdata/wh-twenty-server/docker" Mode="rw" Description="The location where Teldrive stores application data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="PG_DATABASE_URL" Target="PG_DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="SERVER_URL" Target="SERVER_URL" Default="http://localhost:3000" Mode="" Description="URL to the hosted server." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
+    <Config Name="FRONT_BASE_URL" Target="FRONT_BASE_URL" Default="http://localhost:3000" Mode="" Description="URL to the hosted frontend." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
+    <Config Name="ACCESS_TOKEN_SECRET" Target="ACCESS_TOKEN_SECRET" Default="" Mode="" Description="Secret used for the access tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="LOGIN_TOKEN_SECRET" Target="LOGIN_TOKEN_SECRET" Default="" Mode="" Description="Secret used for the login tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="REFRESH_TOKEN_SECRET" Target="REFRESH_TOKEN_SECRET" Default="" Mode="" Description="Secret used for the refresh tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="FILE_TOKEN_SECRET" Target="FILE_TOKEN_SECRET" Default="" Mode="" Description="Secret used for the file tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="SIGN_IN_PREFILLED" Target="SIGN_IN_PREFILLED" Default="true|false" Mode="" Description="Prefill the sign-in form for usage in a demo or dev environment." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+    <Config Name="STORAGE_TYPE" Target="STORAGE_TYPE" Default="local|s3" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">local</Config>
+    <Config Name="MESSAGE_QUEUE_TYPE" Target="MESSAGE_QUEUE_TYPE" Default="pg-boss|bull-mq" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">pg-boss</Config>
+    <Config Name="ENABLE_DB_MIGRATIONS" Target="ENABLE_DB_MIGRATIONS" Default="true|false" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+</Container>

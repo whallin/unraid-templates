@@ -5,6 +5,7 @@
     <Overview>The Open Source Airtable Alternative. Turns any MySQL, PostgreSQL, SQL Server, SQLite, or MariaDB database into a smart spreadsheet.</Overview>
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
+    <Requires>
 NocoDB requires:&#xD;   
 - (Optional) A PostgreSQL database.&#xD;
     NocoDB will fallback to SQLite if no database is provided.</Requires>

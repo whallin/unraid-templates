@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-maloja</Name>
+    <Overview>Self-hosted music scrobble database to create personal listening statistics and charts.</Overview>
+    <Category>Tools: Other: MediaApp:Music</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>krateng/maloja:latest</Repository>
+    <Registry>https://hub.docker.com/r/krateng/maloja</Registry>
+    <Project>https://github.com/krateng/maloja</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:42010]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/maloja.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/maloja.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Maloja web UI port" Target="42010" Default="42010" Mode="tcp" Description="The TCP port Maloja listens on." Type="Port" Display="always" Required="true" Mask="false">42010</Config>
+    <!-- Volumes -->
+    <Config Name="Maloja storage" Target="/mljdata" Default="/mnt/user/appdata/wh-maloja" Mode="rw" Description="The location where Maloja stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="MALOJA_FORCE_PASSWORD" Target="MALOJA_FORCE_PASSWORD" Default="/mljdata" Mode="" Description="Set an admin password for Maloja." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="MALOJA_DATA_DIRECTORY" Target="MALOJA_DATA_DIRECTORY" Default="/mljdata" Mode="" Description="Set the directory in the container where configuration folders/files should be located." Type="Variable" Display="advanced" Required="true" Mask="false">/mljdata</Config>
+</Container>

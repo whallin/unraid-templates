@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-obsidian</Name>
+    <Overview>Obsidian is a note-taking app that lets you create, link, and organize your notes on your device, with hundreds of plugins and themes to customize your workflow.</Overview>
+    <Category>Productivity: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/linuxserver/obsidian:latest</Repository>
+    <Registry>https://github.com/linuxserver/docker-obsidian/pkgs/container/obsidian</Registry>
+    <Project>https://obsidian.md/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/obsidian.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/obsidian.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Obsidian web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Obsidian listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="Obsidian storage" Target="/config" Default="/mnt/user/appdata/wh-obsidian" Mode="rw" Description="The location where Obsidian stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="GL support in VNC" Target="" Default="" Mode="" Description="Mount for DRI3 GPU Acceleration." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+    <Config Name="CUSTOM_USER" Target="CUSTOM_USER" Default="abc" Mode="" Description="HTTP Basic auth username." Type="Variable" Display="always" Required="false" Mask="false">abc</Config>
+    <Config Name="PASSWORD" Target="PASSWORD" Default="abc" Mode="" Description="HTTP Basic auth password, if unset, there will be no auth." Type="Variable" Display="always" Required="false" Mask="true">abc</Config>
+    <Config Name="NO_DECOR" Target="NO_DECOR" Default="true|false" Mode="" Description="If true, the application will run without window borders for use as a PWA." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+</Container>

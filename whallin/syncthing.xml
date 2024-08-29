@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-syncthing</Name>
+    <Overview>Syncthing is a free and open source software that syncs files between two or more devices in real time, without a central server.</Overview>
+    <Category>Backup: Cloud:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Syncthing requires:&#xD;
+- (Optional) "Network Type" set to 'host' for improved performance.&#xD;
+    Learn more: https://github.com/syncthing/syncthing/blob/main/README-Docker.md#discovery</Requires>
+    <!-- Image settings -->
+    <Repository>syncthing/syncthing:latest</Repository>
+    <Registry>https://hub.docker.com/r/syncthing/syncthing</Registry>
+    <Project>https://syncthing.net/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8384]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/syncthing.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/syncthing.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Syncthing web UI port" Target="8384" Default="8384" Mode="tcp" Description="The TCP port Syncthing listens on." Type="Port" Display="always" Required="true" Mask="false">8384</Config>
+    <Config Name="Syncthing file transfers port" Target="22000" Default="22000" Mode="tcp" Description="The TCP port file transfers listens on." Type="Port" Display="always" Required="true" Mask="false">22000</Config>
+    <Config Name="Syncthing QUIC file transfers port" Target="22000" Default="22000" Mode="udp" Description="The UDP port QUIC file transfers listens on." Type="Port" Display="always" Required="true" Mask="false">22000</Config>
+    <Config Name="Syncthing local discovery broadcast port" Target="21027" Default="21027" Mode="udp" Description="The UDP port local discover broadcasts listens on." Type="Port" Display="always" Required="true" Mask="false">21027</Config>
+    <!-- Volumes -->
+    <Config Name="Syncthing storage" Target="/var/syncthing" Default="/mnt/user/appdata/wh-syncthing" Mode="rw" Description="The location where Syncthing stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

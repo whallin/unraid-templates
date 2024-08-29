@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-plausible-ce</Name>
+    <Overview>Simple, open source, lightweight and privacy-friendly web analytics alternative to Google Analytics.</Overview>
+    <Category>Productivity: Tools: Other: Network:Web</Category>
+    <Beta>false</Beta>
+    <Requires>
+Plausible requires:&#xD;
+- A PostgreSQL 15+ database.&#xD;
+- A ClickHouse 24 database.</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/plausible/community-edition:latest</Repository>
+    <Registry>https://github.com/plausible/analytics/pkgs/container/community-edition</Registry>
+    <Project>https://plausible.io/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <PostArgs>sh -c "sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db createdb &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; /entrypoint.sh run"</PostArgs>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/plausible.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/plausible.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Plausible web UI port" Target="8000" Default="8000" Mode="tcp" Description="The TCP port Plausible listens on." Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+    <!-- Variables -->
+    <Config Name="BASE_URL" Target="BASE_URL" Default="" Mode="" Description="Configures the base URL to use in link generation." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Configures the secret used for sessions in the dashboard." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="TOTP_VAULT_KEY" Target="TOTP_VAULT_KEY" Default="" Mode="" Description="Configures the secret used for encrypting TOTP secrets at rest using AES256-GCM." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="Configures the secret used for encrypting TOTP secrets at rest using AES256-GCM." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="CLICKHOUSE_DATABASE_URL" Target="CLICKHOUSE_DATABASE_URL" Default="" Mode="" Description="Configures the URL for ClickHouse database, e.g. http://HOST:PORT/DATABASENAME" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DISABLE_REGISTRATION" Target="DISABLE_REGISTRATION" Default="true|false" Mode="" Description="Restricts registration of new users." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+    <Config Name="GOOGLE_CLIENT_ID" Target="GOOGLE_CLIENT_ID" Default="" Mode="" Description="Restricts registration of new users." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="GOOGLE_CLIENT_SECRET" Target="GOOGLE_CLIENT_SECRET" Default="" Mode="" Description="The Client Secret from the Google API Console for your project." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+    <Config Name="MAXMIND_EDITION" Target="MAXMIND_EDITION" Default="" Mode="" Description="MaxMind database edition to use." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="MAXMIND_LICENSE_KEY" Target="MAXMIND_LICENSE_KEY" Default="GeoLite2-City" Mode="" Description="To use MaxMind you need to create an 'maxmind.com' account." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>

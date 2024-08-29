@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-amp</Name>
+    <Overview>CubeCoders AMP - The powerful but simple to use game server control panel. Supports both Windows and Linux, easy to install and supports dozens of game servers and applications.</Overview>
+    <Category>GameServers:</Category>
+    <Beta>false</Beta>
+    <Requires>
+AMP requires:&#xD;
+- A license key for CubeCoders AMP.&#xD;
+- Updating the "Post Arguments" with a MAC address.&#xD;
+    Learn more: https://github.com/MitchTalmadge/AMP-dockerized?tab=readme-ov-file#mac-address-important-please-read</Requires>
+    <!-- Image settings -->
+    <Repository>mitchtalmadge/amp-dockerized:latest</Repository>
+    <Registry>https://hub.docker.com/r/mitchtalmadge/amp-dockerized/tags</Registry>
+    <Project>https://cubecoders.com/AMP</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+    <ExtraParams>--mac-address="02:42:AC:XX:XX:XX" --init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/amp.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/amp.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="AMP web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port AMP listens on." Type="Port" Display="always" Required="true" Mask="false">8008</Config>
+    <!-- Volumes -->
+    <Config Name="AMP storage" Target="/home/amp/.ampdata" Default="/mnt/user/appdata/wh-amp" Mode="rw" Description="The location where AMP stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+    <Config Name="AMP_LICENSE" Target="AMP_LICENSE" Default="" Mode="" Description=" The licence key for CubeCoders AMP." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="USERNAME" Target="USERNAME" Default="admin" Mode="" Description="The username of the admin user created on first boot." Type="Variable" Display="always" Required="false" Mask="true">admin</Config>
+    <Config Name="PASSWORD" Target="PASSWORD" Default="password" Mode="" Description="The password of the admin user. This value is only used when creating the new user." Type="Variable" Display="always" Required="false" Mask="true">password</Config>
+    <Config Name="AMP_RELEASE_STREAM" Target="AMP_RELEASE_STREAM" Default="Mainline|Development" Mode="" Description="Don't change this unless you know what you're doing." Type="Variable" Display="advanced" Required="false" Mask="false">Mainline</Config>
+</Container>

@@ -12,11 +12,11 @@
     <!-- Branch settings -->
     <Branch>
         <Tag>latest</Tag>
-        <TagDescription>Full functionality, larger image size.</TagDescription>
+        <TagDescription>Full functionality, larger image size</TagDescription>
     </Branch>
     <Branch>
         <Tag>alpine</Tag>
-        <TagDescription>No SQLite support, smaller image size.</TagDescription>
+        <TagDescription>No SQLite support, smaller image size</TagDescription>
     </Branch>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3000]/</WebUI>

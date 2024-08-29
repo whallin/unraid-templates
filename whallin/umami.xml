@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-umami</Name>
+    <Overview>Umami is a simple, fast, privacy-focused alternative to Google Analytics.</Overview>
+    <Category>Productivity: Tools: Other: Network:Web</Category>
+    <Beta>false</Beta>
+    <Requires>
+Umami requires:&#xD;
+- A PostgreSQL or MySQL/MariaDB database.</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/umami-software/umami:postgresql-latest</Repository>
+    <Registry>https://github.com/umami-software/umami/pkgs/container/umami</Registry>
+    <Project>https://umami.is/</Project>
+    <!-- Branch settings -->
+    <Branch>
+        <Tag>postgresql-latest</Tag>
+        <TagDescription>PostgreSQL support</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>mysql-latest</Tag>
+        <TagDescription>MySQL/MariaDB support</TagDescription>
+    </Branch>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/umami.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/umami.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Umami web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Umami listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <!-- Variables -->
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgresql://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A unique value for your installation." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="CLIENT_IP_HEADER" Target="CLIENT_IP_HEADER" Default="" Mode="" Description="HTTP header to check for the client's IP address." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="TRACKER_SCRIPT_NAME" Target="TRACKER_SCRIPT_NAME" Default="script.js" Mode="" Description="Allows you to assign a custom name to the tracker script different from the default." Type="Variable" Display="advanced" Required="false" Mask="false">script.js</Config>
+    <Config Name="DISABLE_LOGIN" Target="DISABLE_LOGIN" Default="0/1" Mode="" Description="Disables the login page for the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+    <Config Name="DISABLE_UPDATES" Target="DISABLE_UPDATES" Default="0/1" Mode="" Description="Disables the check for new versions of Umami." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+    <Config Name="DISABLE_TELEMETRY" Target="DISABLE_TELEMETRY" Default="0/1" Mode="" Description="Umami collects completely anonymous telemetry data in order help improve the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>

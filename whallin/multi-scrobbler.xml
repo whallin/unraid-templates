@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-multi-scrobbler</Name>
+    <Overview>Scrobble plays from multiple sources to multiple clients.</Overview>
+    <Category>Tools: Other: MediaApp:Music</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/foxxmd/multi-scrobbler:latest-alpine</Repository>
+    <Registry>https://github.com/FoxxMD/multi-scrobbler/pkgs/container/multi-scrobbler</Registry>
+    <Project>https://foxxmd.github.io/multi-scrobbler/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:9078]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/multi-scrobbler.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/multi-scrobbler.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="multi-scrobbler web UI port" Target="9078" Default="9078" Mode="tcp" Description="The TCP port multi-scrobbler listens on." Type="Port" Display="always" Required="true" Mask="false">9078</Config>
+    <!-- Volumes -->
+    <Config Name="multi-scrobbler storage" Target="/config" Default="/mnt/user/appdata/wh-multi-scrobbler" Mode="rw" Description="The location where multi-scrobbler stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

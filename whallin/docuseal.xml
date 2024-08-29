@@ -32,5 +32,5 @@ DocuSeal requires:&#xD;
     <!-- Volumes -->
     <Config Name="DocuSeal storage" Target="/data/docuseal" Default="/mnt/user/appdata/wh-docuseal" Mode="rw" Description="The location where DocuSeal stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgresql://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

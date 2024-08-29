@@ -2,13 +2,13 @@
 <Container version="2">
     <!-- App info -->
     <Name>wh-stirling-pdf</Name>
-    <Overview>#1 Locally hosted web application that allows you to perform various operations on PDF files.</Overview>
+    <Overview>Locally hosted web application that allows you to perform various operations on PDF files.</Overview>
     <Category>Productivity: Tools: Other:</Category>
     <Beta>false</Beta>
     <Requires>
 Stirling-PDF requires:&#xD;
 - (Optional) Tesseract language packs for OCR.&#xD;
-    Setting up OCR: https://stirlingtools.com/docs/Advanced%20Configuration/OCR</Requires>
+    Learn more: https://stirlingtools.com/docs/Advanced%20Configuration/OCR</Requires>
     <!-- Image settings -->
     <Repository>ghcr.io/stirling-tools/s-pdf:latest-fat</Repository>
     <Registry>https://github.com/Stirling-Tools/Stirling-PDF/pkgs/container/s-pdf</Registry>

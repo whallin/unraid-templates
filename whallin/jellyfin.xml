@@ -5,6 +5,10 @@
     <Overview>Jellyfin is a volunteer-built media solution that lets you stream your own media to any device.</Overview>
     <Category>MediaApp:Video MediaApp:Music MediaApp:Books MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos</Category>
     <Beta>false</Beta>
+    <Requires>
+Jellyfin requires:&#xD;
+- (Optional) For hardware acceleration; an QSV, NVENC, AMF, or VA-API capable device.&#xD;
+    Learn more: https://jellyfin.org/docs/general/administration/hardware-acceleration</Requires>
     <!-- Image settings -->
     <Repository>ghcr.io/linuxserver/jellyfin:latest</Repository>
     <Registry>https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin</Registry>
@@ -29,9 +33,9 @@
     <Config Name="Jellyfin DNLA port" Target="1900" Default="1900" Mode="udp" Description="The UDP port DNLA listens on." Type="Port" Display="always" Required="false" Mask="false">1900</Config>
     <!-- Volumes -->
     <Config Name="Jellyfin storage" Target="/config" Default="/mnt/user/appdata/wh-jellyfin" Mode="rw" Description="The location where Jellyfin stores its data." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Hardware acceleration (Intel/ATI/AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for Intel/ATI/AMD" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
-    <Config Name="Hardware acceleration (AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for Intel/ATI/AMD" Type="Device" Display="always" Required="false" Mask="false">/dev/kfd</Config>
+    <Config Name="Hardware acceleration (Intel/ATI/AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for Intel/ATI/AMD" Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
+    <Config Name="Hardware acceleration (AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for /AMD" Type="Device" Display="advanced" Required="false" Mask="false">/dev/kfd</Config>
     <!-- Variables -->
     <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
-    <Config Name="DOCKER_MODS" Target="DOCKER_MODS" Default="linuxserver/mods:jellyfin-opencl-intel|linuxserver/mods:jellyfin-amd" Mode="" Description="Enables OpenCL or AMD VAAPI hardware acceleration" Type="Variable" Display="always" Required="false" Mask="false">linuxserver/mods:jellyfin-opencl-intel</Config>
+    <Config Name="DOCKER_MODS" Target="DOCKER_MODS" Default="linuxserver/mods:jellyfin-opencl-intel|linuxserver/mods:jellyfin-amd" Mode="" Description="Enables OpenCL or AMD VA-API hardware acceleration" Type="Variable" Display="always" Required="false" Mask="false">linuxserver/mods:jellyfin-opencl-intel</Config>
 </Container>

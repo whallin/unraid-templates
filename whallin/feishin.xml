@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-feishin</Name>
+    <Overview>A modern self-hosted music player.</Overview>
+    <Category>MediaApp:Music</Category>
+    <Beta>false</Beta>
+    <Requires>
+Feishin requires:&#xD;
+- A Jellyfin or Navidrome server.</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/jeffvli/feishin:latest</Repository>
+    <Registry>https://github.com/jeffvli/feishin/pkgs/container/feishin</Registry>
+    <Project>https://github.com/jeffvli/feishin</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:9180]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/feishin.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/feishin.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Feishin web UI port" Target="9180" Default="9180" Mode="tcp" Description="The TCP port Feishin listens on." Type="Port" Display="always" Required="true" Mask="false">9180</Config>
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+</Container>

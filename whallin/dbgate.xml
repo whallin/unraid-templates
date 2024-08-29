@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-dbgate</Name>
+    <Overview>Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others.</Overview>
+    <Category>Productivity: Network:Management</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>dbgate/dbgate:latest</Repository>
+    <Registry>https://hub.docker.com/r/dbgate/dbgate</Registry>
+    <Project>https://dbgate.org/</Project>
+    <!-- Branch settings -->
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Full functionality, larger image size.</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>alpine</Tag>
+        <TagDescription>Lacks SQLite support, smaller image size.</TagDescription>
+    </Branch>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/dbgate.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/dbgate.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="DbGate web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DbGate listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="DbGate storage" Target="/root/.dbgate" Default="/mnt/user/appdata/wh-dbgate" Mode="rw" Description="The location where DbGate stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="LOGIN" Target="LOGIN" Default="" Mode="" Description="Username for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Password for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="true"/>
+</Container>

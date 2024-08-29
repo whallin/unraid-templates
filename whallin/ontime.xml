@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-ontime</Name>
+    <Overview>Free, open-source time keeping for live events.</Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>getontime/ontime:latest</Repository>
+    <Registry>https://hub.docker.com/r/getontime/ontime</Registry>
+    <Project>https://www.getontime.no/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:4001]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/ontime.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/ontime.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Ontime web UI port" Target="4001" Default="4001" Mode="tcp" Description="The TCP port Ontime listens on." Type="Port" Display="always" Required="true" Mask="false">4001</Config>
+    <Config Name="Ontime OSC port" Target="8888" Default="8888" Mode="tcp" Description="The TCP port OSC input listens on." Type="Port" Display="always" Required="false" Mask="false">8888</Config>
+    <!-- Volumes -->
+    <Config Name="Ontime storage" Target="/data" Default="/mnt/user/appdata/wh-ontime" Mode="rw" Description="The location where Ontime stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+</Container>

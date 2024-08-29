@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-docuseal</Name>
+    <Overview>Open source DocuSign alternative. Create, fill, and sign digital documents.</Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>
+DocuSeal requires:&#xD;
+- (Optional) A PostgreSQL or MySQL/MariaDB database.&#xD;
+    DocuSeal will fallback to SQLite if no database is provided.</Requires>
+    <!-- Image settings -->
+    <Repository>docuseal/docuseal:latest</Repository>
+    <Registry>https://hub.docker.com/r/docuseal/docuseal</Registry>
+    <Project>https://www.docuseal.co/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/docuseal.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/docuseal.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="DocuSeal web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DocuSeal listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <!-- Volumes -->
+    <Config Name="DocuSeal storage" Target="/data/docuseal" Default="/mnt/user/appdata/wh-docuseal" Mode="rw" Description="The location where DocuSeal stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgresql://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

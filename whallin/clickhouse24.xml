@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-clickhouse24</Name>
+    <Overview>ClickHouse is an open-source column-oriented database management system.</Overview>
+    <Category>Productivity: Network:Management</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>clickhouse/clickhouse-server:24-alpine</Repository>
+    <Registry>https://hub.docker.com/r/clickhouse/clickhouse-server/</Registry>
+    <Project>https://clickhouse.com/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/clickhouse.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/clickhouse24.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Clickhouse listen port" Target="8123" Default="8123" Mode="tcp" Description="The TCP port Clickhouse listens on." Type="Port" Display="always" Required="true" Mask="false">8123</Config>
+    <!-- Volumes -->
+    <Config Name="Clickhouse data" Target="/var/lib/clickhouse" Default="/mnt/user/appdata/wh-clickhouse24/data" Mode="rw" Description="The location where Clickhouse stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Clickhouse logs" Target="/var/log/clickhouse-server" Default="/mnt/user/appdata/wh-clickhouse24/logs" Mode="rw" Description="The location where Clickhouse stores its logs." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

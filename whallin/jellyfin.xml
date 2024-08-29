@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-jellyfin</Name>
+    <Overview>Jellyfin is a volunteer-built media solution that lets you stream your own media to any device.</Overview>
+    <Category>MediaApp:Video MediaApp:Music MediaApp:Books MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/linuxserver/jellyfin:latest</Repository>
+    <Registry>https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin</Registry>
+    <Project>https://jellyfin.org/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:8096]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/jellyfin.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/jellyfin.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Jellyfin web UI port" Target="8096" Default="8096" Mode="tcp" Description="The TCP port Jellyfin listens on." Type="Port" Display="always" Required="true" Mask="false">8096</Config>
+    <Config Name="Jellyfin local discovery port" Target="7359" Default="7359" Mode="udp" Description="The UDP port local discovery listens on." Type="Port" Display="always" Required="false" Mask="false">7359</Config>
+    <Config Name="Jellyfin DNLA port" Target="1900" Default="1900" Mode="udp" Description="The UDP port DNLA listens on." Type="Port" Display="always" Required="false" Mask="false">1900</Config>
+    <!-- Volumes -->
+    <Config Name="Jellyfin storage" Target="/config" Default="/mnt/user/appdata/wh-jellyfin" Mode="rw" Description="The location where Jellyfin stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Hardware acceleration (Intel/ATI/AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for Intel/ATI/AMD" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+    <Config Name="Hardware acceleration (AMD)" Target="" Default="" Mode="" Description="Hardware acceleration for Intel/ATI/AMD" Type="Device" Display="always" Required="false" Mask="false">/dev/kfd</Config>
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+    <Config Name="DOCKER_MODS" Target="DOCKER_MODS" Default="linuxserver/mods:jellyfin-opencl-intel|linuxserver/mods:jellyfin-amd" Mode="" Description="Enables OpenCL or AMD VAAPI hardware acceleration" Type="Variable" Display="always" Required="false" Mask="false">linuxserver/mods:jellyfin-opencl-intel</Config>
+</Container>

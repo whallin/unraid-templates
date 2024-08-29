@@ -16,7 +16,7 @@
     </Branch>
     <Branch>
         <Tag>alpine</Tag>
-        <TagDescription>Lacks SQLite support, smaller image size.</TagDescription>
+        <TagDescription>No SQLite support, smaller image size.</TagDescription>
     </Branch>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3000]/</WebUI>

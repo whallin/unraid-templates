@@ -7,8 +7,8 @@
     <Beta>false</Beta>
     <Requires>
 EarnApp requires:&#xD;
-    - An "earnapp.com" account.&#xD;
-    - Running the command 'earnapp showid' in the container &amp;amp; registering the UUID on "earnapp.com".</Requires>
+- An "earnapp.com" account.&#xD;
+- Running the command 'earnapp showid' in the container &amp;amp; registering the UUID on "earnapp.com".</Requires>
     <!-- Image settings -->
     <Repository>fazalfarhan01/earnapp:latest</Repository>
     <Registry>https://hub.docker.com/r/fazalfarhan01/earnapp</Registry>

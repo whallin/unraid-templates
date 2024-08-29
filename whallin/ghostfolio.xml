@@ -7,8 +7,8 @@
     <Beta>false</Beta>
     <Requires>
 Ghostfolio requires:&#xD;
-    - A PostgreSQL database.&#xD;
-    - A Redis-compatibile database. (e.g. Redis, Valkey, KeyDB, DragonflyDB)</Requires>
+- A PostgreSQL database.&#xD;
+- A Redis-compatibile database. (e.g. Redis, Valkey, KeyDB, DragonflyDB)</Requires>
     <!-- Image settings -->
     <Repository>ghostfolio/ghostfolio:latest</Repository>
     <Registry>https://hub.docker.com/r/ghostfolio/ghostfolio</Registry>

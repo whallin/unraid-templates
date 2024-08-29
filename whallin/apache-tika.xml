@@ -6,17 +6,17 @@
     <Category>Productivity: Other: Network:Management</Category>
     <Beta>false</Beta>
     <!-- Image settings -->
-    <Repository>apache/tika:latest</Repository>
+    <Repository>apache/tika:latest-full</Repository>
     <Registry>https://hub.docker.com/r/apache/tika</Registry>
     <Project>https://tika.apache.org/</Project>
     <!-- Branch settings -->
     <Branch>
-        <Tag>latest</Tag>
-        <TagDescription>Default image with core dependencies</TagDescription>
-    </Branch>
-    <Branch>
         <Tag>latest-full</Tag>
         <TagDescription>Includes dependencies for GDAL + Tesseract OCR</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Default image with core dependencies</TagDescription>
     </Branch>
     <!-- Docker settings -->
     <ExtraParams>--init --no-healthcheck</ExtraParams>

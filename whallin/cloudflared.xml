@@ -8,7 +8,7 @@
     <Requires>
 Cloudflared requires:&#xD;
 - A "cloudflare.com" account.&#xD;
-- Updating the container command with your Cloudflare Tunnel token.</Requires>
+- Updating the "Post Arguments" with your Cloudflare Tunnel token.</Requires>
     <!-- Image settings -->
     <Repository>cloudflare/cloudflared:latest</Repository>
     <Registry>https://hub.docker.com/r/cloudflare/cloudflared</Registry>

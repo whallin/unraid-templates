@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <RemoveFromCA>true</RemoveFromCA>
     <!-- App info -->
     <Name>wh-jellyfin</Name>
     <Overview>Jellyfin is a volunteer-built media solution that lets you stream your own media to any device.</Overview>

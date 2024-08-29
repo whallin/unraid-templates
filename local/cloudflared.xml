@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <RemoveFromCA>true</RemoveFromCA>
     <!-- App info -->
     <Name>wh-cloudflared</Name>
     <Overview>Client for Cloudflare Tunnel, a daemon that exposes private services through the Cloudflare edge.</Overview>

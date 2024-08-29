@@ -11,7 +11,7 @@
     <Project>https://obsidian.md/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3000]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

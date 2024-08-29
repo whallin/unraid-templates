@@ -29,5 +29,5 @@
     <Config Name="CouchDB configuration" Target="/opt/couchdb/etc/local.d" Default="/mnt/user/appdata/wh-apache-couchdb2/local.d" Mode="rw" Description="The location where CouchDB stores its configuration." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="COUCHDB_PASSWORD" Target="COUCHDB_PASSWORD" Default="" Mode="" Description="This variable sets the CouchDB admin password." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="COUCHDB_USER" Target="COUCHDB_USER" Default="postgres" Mode="" Description="This variable sets the CouchDB admin username." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="COUCHDB_USER" Target="COUCHDB_USER" Default="" Mode="" Description="This variable sets the CouchDB admin username." Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>

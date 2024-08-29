@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <RemoveFromCA>true</RemoveFromCA>
     <!-- App info -->
     <Name>wh-home-assistant</Name>
     <Overview>Open source home automation that puts local control and privacy first.</Overview>

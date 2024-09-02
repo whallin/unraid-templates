@@ -1,20 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Replace 'APPNAME' with the name of the application -->
-    <!-- Replace 'CACATEGORY' with the CA category for the application -->
-    <!-- Replace 'REPONAME' with the image -->
-    <!-- Replace 'REGISTRYURL' with the image regsitry URL -->
-    <!-- Replace 'PROJECTURL' with the application project URL -->
-    <!-- Replace 'OVERVIEWTEXT' with the description of the application -->
     <!-- App info -->
-    <Name>wh-APPNAME</Name>
-    <Overview>OVERVIEWTEXT</Overview>
-    <Category>CACATEGORY</Category>
+    <Name>wh-covertx</Name>
+    <Overview>Self-hosted online file converter. Supports 800+ formats.</Overview>
+    <Category>Productivity: Tools: Other:</Category>
     <Beta>false</Beta>
     <!-- Image settings -->
-    <Repository>REPONAME</Repository>
-    <Registry>REGISTRYURL</Registry>
-    <Project>PROJECTURL</Project>
+    <Repository>ghcr.io/c4illin/convertx:latest</Repository>
+    <Registry>https://github.com/users/C4illin/packages/container/package/convertx</Registry>
+    <Project>https://github.com/C4illin/ConvertX</Project>
     <!-- Docker settings -->
     <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
@@ -25,10 +19,15 @@
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
     <Support>https://github.com/whallin/unraid-templates/issues</Support>
-    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/APPNAME.png</Icon>
-    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/APPNAME.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/convertx.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/convertx.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
+    <Config Name="ConvertX web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port ConvertX listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <!-- Volumes -->
+    <Config Name="ConvertX storage" Target="/app/data" Default="/mnt/user/appdata/wh-convertx" Mode="rw" Description="The location where ConvertX stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
+    <Config Name="JWT_SECRET" Target="JWT_SECRET" Default="" Mode="" Description="The token to sign the JSON web tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="ACCOUNT_REGISTRATION" Target="ACCOUNT_REGISTRATION" Default="false|true" Mode="" Description="Toggles account registration, doesn't matter for the first account." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+    <Config Name="ALLOW_UNAUTHENTICATED" Target="ALLOW_UNAUTHENTICATED" Default="false|true" Mode="" Description="Allows anyone to use the service without logging in." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
 </Container>

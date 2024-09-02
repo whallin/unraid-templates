@@ -14,6 +14,7 @@ Vaultwarden requires:&#xD;
     <Registry>https://github.com/dani-garcia/vaultwarden/pkgs/container/vaultwarden</Registry>
     <Project>https://github.com/dani-garcia/vaultwarden</Project>
     <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:80]/</WebUI>
     <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>

@@ -7,7 +7,8 @@
     <Beta>true</Beta>
     <Requires>
 Maybe requires:&#xD;
-- A PostgreSQL database.</Requires>
+- A PostgreSQL database.&#xD;
+- (Optional) A "synthfinance.com" account for automatic currency conversion.</Requires>
     <!-- Image settings -->
     <Repository>ghcr.io/maybe-finance/maybe:latest</Repository>
     <Registry>https://github.com/maybe-finance/maybe/pkgs/container/maybe</Registry>
@@ -32,11 +33,12 @@ Maybe requires:&#xD;
     <!-- Variables -->
     <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="The secret key for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="The PostgreSQL hostname for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="5432" Mode="" Description="The PostgreSQL port for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+    <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="The PostgreSQL port for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="The PostgreSQL database name for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="The PostgreSQL username for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="The PostgreSQL password for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DB_DATABASE_NAME" Target="DB_DATABASE_NAME" Default="" Mode="" Description="The PostgreSQL database name for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="APP_DOMAIN" Target="APP_DOMAIN" Default="" Mode="" Description="This domain is used for generating links in emails and elsewhere." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="SYNTH_API_KEY" Target="SYNTH_API_KEY" Default="" Mode="" Description="This is used to convert between different currencies in the app." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="SELF_HOSTING_ENABLED" Target="SELF_HOSTING_ENABLED" Default="true|false" Mode="" Description="Enables self hosting features." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
     <Config Name="RAILS_FORCE_SSL" Target="RAILS_FORCE_SSL" Default="false|true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
     <Config Name="RAILS_ASSUME_SSL" Target="RAILS_ASSUME_SSL" Default="false|true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>

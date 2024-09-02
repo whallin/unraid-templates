@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <!-- Deprecated reason: Removed from CA due to invalid post argument -->
+    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-plausible-ce</Name>
     <Overview>Simple, open source, lightweight and privacy-friendly web analytics alternative to Google Analytics.</Overview>

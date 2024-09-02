@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
+    <!-- Deprecated reason: Removed from CA -->
+    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-ghostfolio</Name>
     <Overview>Ghostfolio is a privacy-first, open source dashboard for your personal finances.</Overview>

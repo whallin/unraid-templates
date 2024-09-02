@@ -10,11 +10,11 @@ Teldrive requires:&#xD;
 - A Telegram account with 1 bot from @BotFather.&#xD;
 - A PostgreSQL database with "PGroonga" &amp;amp; "pgvector". (e.g. use the "wh-teldrive-postgres16" template)&#xD;
 - "session.db" &amp;amp; "config.toml" must be created and mapped to the container before starting Teldrive.&#xD;
-    "config.toml" example file: https://github.com/divyam234/teldrive/blob/main/config.sample.toml</Requires>
+    "config.toml" example file: https://github.com/tgdrive/teldrive/blob/main/config.sample.toml</Requires>
     <!-- Image settings -->
-    <Repository>ghcr.io/divyam234/teldrive:latest</Repository>
-    <Registry>https://github.com/divyam234/teldrive/pkgs/container/teldrive</Registry>
-    <Project>https://github.com/divyam234/teldrive</Project>
+    <Repository>ghcr.io/tgdrive/teldrive:latest</Repository>
+    <Registry>https://github.com/tgdrive/teldrive/pkgs/container/teldrive</Registry>
+    <Project>https://github.com/tgdrive/teldrive</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8080]/</WebUI>
     <ExtraParams>--init --no-healthcheck</ExtraParams>

@@ -34,8 +34,8 @@ AMP requires:&#xD;
     <Config Name="AMP storage" Target="/home/amp/.ampdata" Default="/mnt/user/appdata/wh-amp" Mode="rw" Description="The location where AMP stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
-    <Config Name="AMP_LICENSE" Target="AMP_LICENSE" Default="" Mode="" Description=" The licence key for CubeCoders AMP." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="USERNAME" Target="USERNAME" Default="admin" Mode="" Description="The username of the admin user created on first boot." Type="Variable" Display="always" Required="false" Mask="true">admin</Config>
+    <Config Name="AMP_LICENCE" Target="AMP_LICENCE" Default="" Mode="" Description="The licence key for CubeCoders AMP." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="USERNAME" Target="USERNAME" Default="admin" Mode="" Description="The username of the admin user created on first boot." Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
     <Config Name="PASSWORD" Target="PASSWORD" Default="password" Mode="" Description="The password of the admin user. This value is only used when creating the new user." Type="Variable" Display="always" Required="false" Mask="true">password</Config>
     <Config Name="AMP_RELEASE_STREAM" Target="AMP_RELEASE_STREAM" Default="Mainline|Development" Mode="" Description="Don't change this unless you know what you're doing." Type="Variable" Display="advanced" Required="false" Mask="false">Mainline</Config>
 </Container>

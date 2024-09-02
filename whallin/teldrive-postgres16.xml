@@ -6,9 +6,9 @@
     <Category>Productivity: Network:Management</Category>
     <Beta>false</Beta>
     <!-- Image settings -->
-    <Repository>ghcr.io/divyam234/postgres:16-alpine</Repository>
-    <Registry>https://github.com/divyam234/teldrive/pkgs/container/postgres</Registry>
-    <Project>https://github.com/divyam234/teldrive</Project>
+    <Repository>ghcr.io/tgdrive/postgres:16-alpine</Repository>
+    <Registry>https://github.com/tgdrive/docker-images/pkgs/container/postgres</Registry>
+    <Project>https://github.com/tgdrive/docker-images</Project>
     <!-- Docker settings -->
     <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>bridge</Network>

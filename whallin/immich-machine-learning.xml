@@ -42,7 +42,7 @@ Immich Machine Learning requires:&#xD;
     <!-- Ports -->
     <Config Name="Immich machine learning port" Target="3003" Default="3003" Mode="tcp" Description="The TCP port Immich Machine Learning listens on." Type="Port" Display="always" Required="true" Mask="false">3003</Config>
     <!-- Volumes -->
-    <Config Name="Immich Machine Learning cache" Target="/cache" Default="/mnt/user/appdata/wh-immich/ml-cache" Mode="rw" Description="The location where Immich stores its machine learning cache." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Immich Machine Learning cache" Target="/cache" Default="/mnt/user/appdata/wh-immich-machine-learning" Mode="rw" Description="The location where Immich stores its machine learning cache." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="OpenVINO devices" Target="" Default="" Mode="" Description="Used for OpenVINO accelerated machine learning." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
     <Config Name="OpenVINO volume" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="Used for OpenVINO accelerated machine learning." Type="Path" Display="advanced" Required="false" Mask="false">/dev/bus/usb</Config>
     <!-- Variables -->

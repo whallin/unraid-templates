@@ -33,7 +33,7 @@ Vaultwarden requires:&#xD;
     <!-- Variables -->
     <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="data/db.sqlite3" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false">data/db.sqlite3</Config>
     <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="Token for the admin interface: https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#secure-the-admin_token" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DOMAIN" Target="DOMAIN" Default="The domain must match the address from where you access the server." Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="The domain must match the address from where you access the server." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Mode="" Description="Controls if new users can register." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
     <Config Name="ICON_REDIRECT_CODE" Target="ICON_REDIRECT_CODE" Default="302|301|307|308" Mode="" Description="The HTTP status code to use for redirects to an external icon service." Type="Variable" Display="advanced" Required="true" Mask="false">302</Config>
     <Config Name="PUSH_ENABLED" Target="PUSH_ENABLED" Default="false|true" Mode="" Description="Enables push notifications. (requires key &amp;amp; ID from https://bitwarden.com/host)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>

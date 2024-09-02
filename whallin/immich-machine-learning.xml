@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-immich-machine-learning</Name>
+    <Overview>High performance self-hosted photo and video management solution.</Overview>
+    <Category>Productivity: Tools: Other: MediaServer:Video MediaServer:Photos Network:Management</Category>
+    <Beta>false</Beta>
+    <Requires>
+Immich Machine Learning requires:&#xD;
+- (Optional) For hardware accelerated machine learning; an CUDA, or OpenVINO capable device.&#xD;
+    Learn more: https://immich.app/docs/features/ml-hardware-acceleration</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/immich-app/immich-machine-learning:release</Repository>
+    <Registry>https://github.com/immich-app/immich/pkgs/container/immich-machine-learning</Registry>
+    <Project>https://immich.app/</Project>
+    <!-- Branch settings -->
+    <Branch>
+        <Tag>release</Tag>
+        <TagDescription>Default image with CPU acceleration</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>release-cuda</Tag>
+        <TagDescription>Hardware acceleration with CUDA support</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>release-openvino</Tag>
+        <TagDescription>Hardware acceleration with OpenVINO support</TagDescription>
+    </Branch>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/immich.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/immich-machine-learning.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Immich machine learning port" Target="3003" Default="3003" Mode="tcp" Description="The TCP port Immich Machine Learning listens on." Type="Port" Display="always" Required="true" Mask="false">3003</Config>
+    <!-- Volumes -->
+    <Config Name="Immich Machine Learning cache" Target="/cache" Default="/mnt/user/appdata/wh-immich/ml-cache" Mode="rw" Description="The location where Immich stores its machine learning cache." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="OpenVINO devices" Target="" Default="" Mode="" Description="Used for OpenVINO accelerated machine learning." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
+    <Config Name="OpenVINO volume" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="Used for OpenVINO accelerated machine learning." Type="Path" Display="advanced" Required="false" Mask="false">/dev/bus/usb</Config>
+    <!-- Variables -->
+    <Config Name="MACHINE_LEARNING_MODEL_TTL" Target="MACHINE_LEARNING_MODEL_TTL" Default="300" Mode="" Description="Inactivity time (in seconds) before a model is unloaded." Type="Variable" Display="always" Required="false" Mask="false">300</Config>
+    <Config Name="MACHINE_LEARNING_MODEL_TTL_POLL_S" Target="MACHINE_LEARNING_MODEL_TTL_POLL_S" Default="10" Mode="" Description="Interval (in seconds) between checks for the model." Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+    <Config Name="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Default="1" Mode="" Description="Number of parallel model operations." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+    <Config Name="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Default="2" Mode="" Description="Number of threads for each model operation." Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+    <Config Name="MACHINE_LEARNING_WORKERS" Target="MACHINE_LEARNING_WORKERS" Default="1" Mode="" Description="Number of worker processes to spawn." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+    <Config Name="MACHINE_LEARNING_WORKER_TIMEOUT" Target="MACHINE_LEARNING_WORKER_TIMEOUT" Default="120" Mode="" Description="Maximum time (in seconds) of unresponsiveness before a worker is killed. (change to 300 for OpenVINO)" Type="Variable" Display="always" Required="false" Mask="false">120</Config>
+</Container>

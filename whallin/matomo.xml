@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-matomo</Name>
+    <Overview>Matomo is the leading open-source analytics platform that gives you more than powerful analytics.</Overview>
+    <Category>Productivity: Tools: Other: Network:Web</Category>
+    <Beta>false</Beta>
+    <Requires>
+Matomo requires:&#xD;
+- A MySQL/MariaDB database.&#xD;</Requires>
+    <!-- Image settings -->
+    <Repository>matomo:apache</Repository>
+    <Registry>https://hub.docker.com/_/matomo/</Registry>
+    <Project>https://matomo.org/</Project>
+    <!-- Branch settings -->
+    <Branch>
+        <Tag>apache</Tag>
+        <TagDescription>Bundled with Apache, ready to be used</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>fpm</Tag>
+        <TagDescription>Bundled with PHP-FPM, requires an external web server</TagDescription>
+    </Branch>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/matomo.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/matomo.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Matomo web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Matomo listens on." Type="Port" Display="always" Required="true" Mask="false">80</Config>
+    <!-- Volumes -->
+    <Config Name="Matomo storage" Target="/var/www/html" Default="/mnt/user/appdata/wh-matomo" Mode="rw" Description="The location where Matomo stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="MATOMO_DATABASE_HOST" Target="MATOMO_DATABASE_HOST" Default="" Mode="" Description="The host where MySQL/MariaDB is running." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MATOMO_DATABASE_USERNAME" Target="MATOMO_DATABASE_USERNAME" Default="" Mode="" Description="The username for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MATOMO_DATABASE_PASSWORD" Target="MATOMO_DATABASE_PASSWORD" Default="" Mode="" Description="The password for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="MATOMO_DATABASE_DBNAME" Target="MATOMO_DATABASE_DBNAME" Default="matomo" Mode="" Description="The Matomo database name for your MySQL/MariaDB database" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MATOMO_DATABASE_ADAPTER" Target="MATOMO_DATABASE_ADAPTER" Default="mysql" Mode="" Description="The Matomo database adapter." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+</Container>

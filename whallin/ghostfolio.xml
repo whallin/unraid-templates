@@ -34,8 +34,8 @@ Ghostfolio requires:&#xD;
     <Config Name="JWT_SECRET_KEY" Target="JWT_SECRET_KEY" Default="" Mode="" Description="A random string used for JSON Web Tokens (JWT)." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="" Mode="" Description="The host where Redis is running." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="" Mode="" Description="The password of Redis." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="" Mode="" Description="The port where Redis is running." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="" Mode="" Description="The password of Redis." Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="The port where Redis is running." Type="Variable" Display="always" Required="true" Mask="false">6379</Config>
     <Config Name="REQUEST_TIMEOUT" Target="REQUEST_TIMEOUT" Default="2000" Mode="" Description="The timeout of network requests to data providers in milliseconds." Type="Variable" Display="advanced" Required="false" Mask="false">2000</Config>
     <Config Name="API_KEY_COINGECKO_DEMO" Target="API_KEY_COINGECKO_DEMO" Default="" Mode="" Description="The CoinGecko **Demo** API key." Type="Variable" Display="advanced" Required="false" Mask="true"/>
     <Config Name="API_KEY_COINGECKO_PRO" Target="API_KEY_COINGECKO_PRO" Default="" Mode="" Description="The CoinGecko **Pro** API key." Type="Variable" Display="advanced" Required="false" Mask="true"/>

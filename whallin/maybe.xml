@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Replace 'APPNAME' with the name of the application -->
-    <!-- Replace 'CACATEGORY' with the CA category for the application -->
-    <!-- Replace 'REPONAME' with the image -->
-    <!-- Replace 'REGISTRYURL' with the image regsitry URL -->
-    <!-- Replace 'PROJECTURL' with the application project URL -->
-    <!-- Replace 'OVERVIEWTEXT' with the description of the application -->
     <!-- App info -->
     <Name>wh-maybe</Name>
-    <Overview>OVERVIEWTEXT</Overview>
+    <Overview>The OS for your personal finances.</Overview>
     <Category>Productivity: Other:</Category>
     <Beta>true</Beta>
+    <Requires>
+Maybe requires:&#xD;
+- A PostgreSQL database.</Requires>
     <!-- Image settings -->
-    <Repository>REPONAME</Repository>
-    <Registry>REGISTRYURL</Registry>
+    <Repository>ghcr.io/maybe-finance/maybe:latest</Repository>
+    <Registry>https://github.com/maybe-finance/maybe/pkgs/container/maybe</Registry>
     <Project>https://maybe.co/</Project>
     <!-- Docker settings -->
     <ExtraParams>--init --no-healthcheck</ExtraParams>
@@ -29,6 +26,19 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/maybe.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
+    <Config Name="Maybe web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Maybe listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <!-- Volumes -->
+    <Config Name="Maybe storage" Target="/rails/storage" Default="/mnt/user/appdata/wh-maybe" Mode="rw" Description="The location where Maybe stores its data." Type="Path" Display="always" Required="true" Mask="false"/>
     <!-- Variables -->
+    <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="The secret key for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="The PostgreSQL hostname for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="5432" Mode="" Description="The PostgreSQL port for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+    <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="The PostgreSQL username for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="The PostgreSQL password for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="DB_DATABASE_NAME" Target="DB_DATABASE_NAME" Default="" Mode="" Description="The PostgreSQL database name for your Maybe instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="APP_DOMAIN" Target="APP_DOMAIN" Default="" Mode="" Description="This domain is used for generating links in emails and elsewhere." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="SELF_HOSTING_ENABLED" Target="SELF_HOSTING_ENABLED" Default="true|false" Mode="" Description="Enables self hosting features." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+    <Config Name="RAILS_FORCE_SSL" Target="RAILS_FORCE_SSL" Default="false|true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+    <Config Name="RAILS_ASSUME_SSL" Target="RAILS_ASSUME_SSL" Default="false|true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+    <Config Name="GOOD_JOB_EXECUTION_MODE" Target="GOOD_JOB_EXECUTION_MODE" Default="async" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">async</Config>
 </Container>

@@ -30,9 +30,9 @@ NocoDB requires:&#xD;
     <!-- Ports -->
     <Config Name="NocoDB web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port NocoDB listens on." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
     <!-- Volumes -->
-    <Config Name="NocoDB storage" Target="/usr/app/data" Default="/mnt/user/appdata/wh-nocodb" Mode="rw" Description="The location where NocoDB stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="NocoDB storage" Target="/usr/app/data" Default="/mnt/user/appdata/wh-nocodb" Mode="rw" Description="The location where NocoDB stores its data." Type="Path" Display="always" Required="true" Mask="false"/>
     <!-- Variables -->
-    <Config Name="NC_DB" Target="NC_DB" Default="" Mode="" Description="The database connection URL, e.g. pg://HOST:PORT?u=USER&p=PASS&d=DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="NC_DB" Target="NC_DB" Default="" Mode="" Description="The database connection URL, e.g. pg://HOST:PORT?u=USER&amp;amp;p=PASS&amp;amp;d=DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="NC_AUTH_JWT_SECRET" Target="NC_AUTH_JWT_SECRET" Default="" Mode="" Description="This JWT secret is utilized for generating authentication tokens and encrypting credentials for external databases." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="NC_REDIS_URL" Target="NC_REDIS_URL" Default="" Mode="" Description="Specifies the Redis URL used for caching, e.g. redis://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="true"/>
 </Container>

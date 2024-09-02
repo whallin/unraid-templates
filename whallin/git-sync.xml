@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-git-sync</Name>
+    <Overview>A simple tool to backup and sync your git repositories.</Overview>
+    <Category>Backup: Cloud:</Category>
+    <Beta>false</Beta>
+    <Requires>
+git-sync requires:&#xD;
+- A path mounted for storing repository backups.&#xD;
+- A config mapped to "/git-sync/config.yaml".&#xD;
+    Learn more: https://github.com/AkashRajpurohit/git-sync/wiki/Configuration</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/akashrajpurohit/git-sync:latest</Repository>
+    <Registry>https://github.com/AkashRajpurohit/git-sync/pkgs/container/git-sync</Registry>
+    <Project>https://github.com/AkashRajpurohit/git-sync</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/github.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/git-sync.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Volumes -->
+    <Config Name="git-sync Config" Target="/git-sync/config.yaml" Default="/mnt/user/appdata/wh-git-sync/config.yaml" Mode="ro" Description="The location where git-sync stores its configuration." Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>

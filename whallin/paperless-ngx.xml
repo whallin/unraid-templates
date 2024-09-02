@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-paperless-ngx</Name>
+    <Overview> A community-supported supercharged version of paperless: scan, index and archive all your physical documents.</Overview>
+    <Category>Productivity: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Paperless-ngx requires:&#xD;
+- A Redis-compatibile database. (e.g. Redis, Valkey, KeyDB, DragonflyDB)&#xD;
+- (Optional) A PostgreSQL or MySQL/MariaDB database.&#xD;
+    Paperless-ngx will fallback to SQLite if no database is provided.&#xD;
+- (Optional) Tika &amp;amp; Gotenberg for parsing Office documents &amp;amp; '.eml'-files.</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/paperless-ngx/paperless-ngx:latest</Repository>
+    <Registry>https://github.com/paperless-ngx/paperless-ngx/pkgs/container/paperless-ngx</Registry>
+    <Project>https://docs.paperless-ngx.com/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/paperless-ngx.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/paperless-ngx.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Paperless-ngx web UI port" Target="8000" Default="8000" Mode="tcp" Description="The TCP port Paperless-ngx listens on." Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+    <!-- Volumes -->
+    <Config Name="Paperless-ngx storage" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/wh-paperless-ngx" Mode="rw" Description="The location where Paperless-ngx stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Paperless-ngx media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="The location where Paperless-ngx stores your documents." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Paperless-ngx consumption" Target="/usr/src/paperless/consume" Default="" Mode="rw" Description="The location where Paperless-ngx looks for documents to import." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Paperless-ngx export" Target="/usr/src/paperless/export" Default="" Mode="rw" Description="The location where Paperless-ngx exports documents upon selection." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+    <Config Name="PAPERLESS_REDIS" Target="PAPERLESS_REDIS" Default="" Mode="" Description="The Redis connection URL, e.g. redis://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="PAPERLESS_DBENGINE" Target="PAPERLESS_DBENGINE" Default="postgresql|mariadb" Mode="" Description="The database engine for Paperless-ngx." Type="Variable" Display="always" Required="false" Mask="false">postgresql</Config>
+    <Config Name="PAPERLESS_DBHOST" Target="PAPERLESS_DBHOST" Default="" Mode="" Description="The database hostname." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_DBPORT" Target="PAPERLESS_DBPORT" Default="" Mode="" Description="The database port." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_DBNAME" Target="PAPERLESS_DBNAME" Default="" Mode="" Description="The Paperless-ngx database name." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_DBUSER" Target="PAPERLESS_DBUSER" Default="" Mode="" Description="The database username." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_DBPASS" Target="PAPERLESS_DBPASS" Default="" Mode="" Description="The database user password." Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="PAPERLESS_SECRET_KEY" Target="PAPERLESS_SECRET_KEY" Default="" Mode="" Description="Paperless uses this to make session tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="PAPERLESS_URL" Target="PAPERLESS_URL" Default="" Mode="" Description="Configures ALLOWED_HOSTS, CORS_ALLOWED_HOSTS, and CSRF_TRUSTED_ORIGINS all at once." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_OCR_LANGUAGE" Target="PAPERLESS_OCR_LANGUAGE" Default="eng" Mode="" Description="The language that will be used when parsing documents: https://docs.paperless-ngx.com/configuration/#PAPERLESS_OCR_LANGUAGE" Type="Variable" Display="always" Required="false" Mask="false">eng</Config>
+    <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Additional OCR languages to install: https://docs.paperless-ngx.com/configuration/#PAPERLESS_OCR_LANGUAGES" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_TIKA_ENABLED" Target="PAPERLESS_TIKA_ENABLED" Default="false|true" Mode="" Description="Toggle the Tika parser." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+    <Config Name="PAPERLESS_TIKA_ENDPOINT" Target="PAPERLESS_TIKA_ENDPOINT" Default="" Mode="" Description="The endpoint URL to reach your Tika server." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="PAPERLESS_TIKA_GOTENBERG_ENDPOINT" Target="PAPERLESS_TIKA_GOTENBERG_ENDPOINT" Default="" Mode="" Description="The endpoint URL to reach your Gotenberg server." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

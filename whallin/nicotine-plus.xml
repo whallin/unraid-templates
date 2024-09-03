@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-nicotine-plus</Name>
+    <Overview>Nicotine+ is a graphical client for the Soulseek peer-to-peer network.</Overview>
+    <Category>Downloaders: MediaApp:Music</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/fletchto99/nicotine-plus-docker:latest</Repository>
+    <Registry>https://github.com/fletchto99/nicotine-plus-docker/pkgs/container/nicotine-plus-docker</Registry>
+    <Project>https://nicotine-plus.org/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:6080]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/nicotine-plus.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/nicotine-plus.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Nicotine+ web UI port" Target="6080" Default="6080" Mode="tcp" Description="The TCP port Nicotine+ listens on." Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+    <!-- Volumes -->
+    <Config Name="Nicotine+ storage" Target="/config" Default="/mnt/user/appdata/wh-nicotine-plus" Mode="rw" Description="The location where Nicotine+ stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Nicotine+ downloads" Target="/data/downloads" Default="/mnt/user/media/wh-nicotine-plus/downloads" Mode="rw" Description="The location where Nicotine+ stores its downloads." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Nicotine+ incomplete downloads" Target="/data/incomplete_downloads" Default="/mnt/user/media/wh-nicotine-plus/downloads/incomplete" Mode="rw" Description="The location where Nicotine+ stores its incomplete downloads." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Nicotine+ shared data" Target="/data/shared" Default="/mnt/user/media/wh-nicotine-plus/shared" Mode="rw" Description="The location where Nicotine+ stores shared files." Type="Path" Display="always" Required="false" Mask="false" />
+    <Config Name="GL support in VNC" Target="" Default="" Mode="" Description="Mount for DRI3 GPU Acceleration." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
+    <!-- Variables -->
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
+    <Config Name="CUSTOM_USER" Target="CUSTOM_USER" Default="abc" Mode="" Description="HTTP Basic auth username." Type="Variable" Display="always" Required="false" Mask="false">abc</Config>
+    <Config Name="PASSWORD" Target="PASSWORD" Default="abc" Mode="" Description="HTTP Basic auth password, if unset, there will be no auth." Type="Variable" Display="always" Required="false" Mask="true">abc</Config>
+</Container>

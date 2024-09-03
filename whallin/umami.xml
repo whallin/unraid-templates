@@ -42,7 +42,7 @@ Umami requires:&#xD;
     <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A unique value for your installation." Type="Variable" Display="always" Required="true" Mask="true"/>
     <Config Name="CLIENT_IP_HEADER" Target="CLIENT_IP_HEADER" Default="" Mode="" Description="HTTP header to check for the client's IP address." Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="TRACKER_SCRIPT_NAME" Target="TRACKER_SCRIPT_NAME" Default="script.js" Mode="" Description="Allows you to assign a custom name to the tracker script different from the default." Type="Variable" Display="advanced" Required="false" Mask="false">script.js</Config>
-    <Config Name="DISABLE_LOGIN" Target="DISABLE_LOGIN" Default="0/1" Mode="" Description="Disables the login page for the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
-    <Config Name="DISABLE_UPDATES" Target="DISABLE_UPDATES" Default="0/1" Mode="" Description="Disables the check for new versions of Umami." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
-    <Config Name="DISABLE_TELEMETRY" Target="DISABLE_TELEMETRY" Default="0/1" Mode="" Description="Umami collects completely anonymous telemetry data in order help improve the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+    <Config Name="DISABLE_LOGIN" Target="DISABLE_LOGIN" Default="0|1" Mode="" Description="Disables the login page for the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+    <Config Name="DISABLE_UPDATES" Target="DISABLE_UPDATES" Default="0|1" Mode="" Description="Disables the check for new versions of Umami." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+    <Config Name="DISABLE_TELEMETRY" Target="DISABLE_TELEMETRY" Default="0|1" Mode="" Description="Umami collects completely anonymous telemetry data in order help improve the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
 </Container>

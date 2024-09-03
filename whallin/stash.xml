@@ -28,8 +28,8 @@
     <!-- Volumes -->
     <Config Name="Stash media" Target="/data" Default="/mnt/user/media/wh-stash" Mode="rw" Description="The location where Stash stores your media." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Stash config" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/root" Mode="rw" Description="The location where Stash stores its configs." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Stash metadata" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/metadata" Mode="rw" Description="The location where Stash stores its metadata." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Stash cache" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/cache" Mode="rw" Description="The location where Stash stores its cache." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Stash blobs" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/blobs" Mode="rw" Description="The location where Stash stores its blobs (covers, thumbnails)." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Stash generated" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/generated" Mode="rw" Description="The location where Stash stores its generated content (screenshots, previews, transcodes, sprites)." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Stash metadata" Target="/metadata" Default="/mnt/user/appdata/wh-stash/metadata" Mode="rw" Description="The location where Stash stores its metadata." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Stash cache" Target="/cache" Default="/mnt/user/appdata/wh-stash/cache" Mode="rw" Description="The location where Stash stores its cache." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Stash blobs" Target="/blobs" Default="/mnt/user/appdata/wh-stash/blobs" Mode="rw" Description="The location where Stash stores its blobs (covers, thumbnails)." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Stash generated" Target="/generated" Default="/mnt/user/appdata/wh-stash/generated" Mode="rw" Description="The location where Stash stores its generated content (screenshots, previews, transcodes, sprites)." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

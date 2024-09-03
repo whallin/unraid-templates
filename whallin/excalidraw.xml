@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-excalidraw</Name>
+    <Overview> Virtual whiteboard for sketching hand-drawn like diagrams.</Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>excalidraw/excalidraw:latest</Repository>
+    <Registry>https://hub.docker.com/r/excalidraw/excalidraw</Registry>
+    <Project>https://excalidraw.com/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:80]/</WebUI>
+    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/excalidraw.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/excalidraw.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Excalidraw web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Excalidraw listens on." Type="Port" Display="always" Required="true" Mask="false">80</Config>
+</Container>

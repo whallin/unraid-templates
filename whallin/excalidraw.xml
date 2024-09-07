@@ -2,7 +2,7 @@
 <Container version="2">
     <!-- App info -->
     <Name>wh-excalidraw</Name>
-    <Overview> Virtual whiteboard for sketching hand-drawn like diagrams.</Overview>
+    <Overview>Virtual whiteboard for sketching hand-drawn like diagrams.</Overview>
     <Category>Productivity: Tools: Other:</Category>
     <Beta>false</Beta>
     <!-- Image settings -->

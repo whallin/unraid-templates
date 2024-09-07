@@ -33,4 +33,6 @@ DocuSeal requires:&#xD;
     <Config Name="DocuSeal storage" Target="/data/docuseal" Default="/mnt/user/appdata/wh-docuseal" Mode="rw" Description="The location where DocuSeal stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="FORCE_SSL" Target="FORCE_SSL" Default="false|true" Mode="" Description="Toggle to enforce SSL." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+    <Config Name="HOST" Target="HOST" Default="" Mode="" Description="The domain name for your application." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

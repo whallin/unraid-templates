@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-teldrive-rclone</Name>
+    <Overview>A custom Rclone fork made for mounting Teldrive as a share.</Overview>
+    <Category>Backup: Cloud:</Category>
+    <Beta>false</Beta>
+    <!-- Image settings -->
+    <Repository>ghcr.io/tgdrive/rclone:latest</Repository>
+    <Registry>https://github.com/tgdrive/rclone/pkgs/container/rclone</Registry>
+    <Project>https://github.com/tgdrive/rclone</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:5572]/</WebUI>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
+    <PostArgs>rcd --rc-no-auth --rc-addr :5572 --rc-web-gui --rc-web-gui-no-open-browser</PostArgs>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/rclone.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/teldrive-rclone.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Rclone web UI port" Target="5572" Default="5572" Mode="tcp" Description="The TCP port Rclone listens on." Type="Port" Display="always" Required="true" Mask="false">5572</Config>
+    <!-- Volumes -->
+    <Config Name="Rclone data" Target="/data" Default="/mnt/user/appdata/wh-teldrive-rclone/data" Mode="rw" Description="The location where Rclone stores share data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Rclone config" Target="/config/rclone" Default="/mnt/user/appdata/wh-teldrive-rclone/config" Mode="ro" Description="The location where Rclone stores its config." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

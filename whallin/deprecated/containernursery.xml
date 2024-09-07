@@ -29,4 +29,6 @@
     <!-- Volumes -->
     <Config Name="ContainerNursery storage" Target="/usr/src/app/config" Default="/mnt/user/appdata/wh-containernursery" Mode="rw" Description="The location where ContainerNursery stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Docker daemon socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="An entry point for the Docker API." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+    <!-- Variables -->
+    <Config Name="CN_LOG_LEVEL" Target="CN_LOG_LEVEL" Default="info|debug|warn|error" Mode="" Description="Sets the minimum log level." Type="Variable" Display="always" Required="true" Mask="false">info</Config>
 </Container>

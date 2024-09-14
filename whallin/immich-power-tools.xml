@@ -15,7 +15,7 @@ Immich Power Tools requires:&#xD;
     <Project>https://github.com/varun-raj/immich-power-tools</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3000]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

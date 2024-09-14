@@ -11,7 +11,7 @@
     <Project>https://github.com/krateng/maloja</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:42010]/</WebUI>
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

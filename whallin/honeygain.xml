@@ -14,7 +14,7 @@ Honeygain requires:&#xD;
     <Registry>https://hub.docker.com/r/honeygain/honeygain</Registry>
     <Project>https://www.honeygain.com/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>-email ACCOUNT_EMAIL -pass ACCOUNT_PASS -device DEVICE_NAME -tou-accept</PostArgs>
     <Network>host</Network>
     <Privileged>false</Privileged>

@@ -14,7 +14,7 @@ MystNodes requires:&#xD;
     <Project>https://www.mystnodes.com/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:4449]/</WebUI>
-    <ExtraParams>--cap-add NET_ADMIN --init --no-healthcheck</ExtraParams>
+    <ExtraParams>--cap-add NET_ADMIN --init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>service --agreed-terms-and-conditions</PostArgs>
     <Network>bridge</Network>
     <Privileged>false</Privileged>

@@ -10,7 +10,7 @@
     <Registry>https://hub.docker.com/_/postgres/</Registry>
     <Project>https://www.postgresql.org/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

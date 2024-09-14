@@ -16,7 +16,7 @@ AMP requires:&#xD;
     <Project>https://cubecoders.com/AMP</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-    <ExtraParams>--mac-address="02:42:AC:XX:XX:XX" --init --no-healthcheck</ExtraParams>
+    <ExtraParams>--mac-address="02:42:AC:XX:XX:XX" --init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

@@ -10,7 +10,7 @@
     <Registry>https://github.com/itsecholot/ContainerNursery/pkgs/container/containernursery</Registry>
     <Project>https://github.com/ItsEcholot/ContainerNursery</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

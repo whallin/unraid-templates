@@ -11,7 +11,7 @@
     <Project>https://foxxmd.github.io/multi-scrobbler/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:9078]/</WebUI>
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

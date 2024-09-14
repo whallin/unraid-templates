@@ -14,7 +14,7 @@ Maybe requires:&#xD;
     <Registry>https://github.com/maybe-finance/maybe/pkgs/container/maybe</Registry>
     <Project>https://maybe.co/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

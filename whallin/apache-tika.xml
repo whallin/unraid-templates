@@ -19,7 +19,7 @@
         <TagDescription>Default image with core dependencies</TagDescription>
     </Branch>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

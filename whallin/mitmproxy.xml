@@ -11,7 +11,7 @@
     <Project>https://mitmproxy.org/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8081]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>mitmweb --web-host 0.0.0.0</PostArgs>
     <Network>host</Network>
     <Privileged>false</Privileged>

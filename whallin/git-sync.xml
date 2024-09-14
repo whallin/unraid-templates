@@ -15,7 +15,7 @@ git-sync requires:&#xD;
     <Registry>https://github.com/AkashRajpurohit/git-sync/pkgs/container/git-sync</Registry>
     <Project>https://github.com/AkashRajpurohit/git-sync</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

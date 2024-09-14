@@ -14,7 +14,7 @@ DragonflyDB requires:&#xD;
     <Registry>https://github.com/dragonflydb/dragonfly/pkgs/container/dragonfly</Registry>
     <Project>https://www.dragonflydb.io/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--ulimit memlock=-1 --init --no-healthcheck</ExtraParams>
+    <ExtraParams>--ulimit memlock=-1 --init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

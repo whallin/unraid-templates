@@ -18,7 +18,7 @@ Immich Server requires:&#xD;
     <Project>https://immich.app/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3001]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

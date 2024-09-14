@@ -15,7 +15,7 @@ DocuSeal requires:&#xD;
     <Project>https://www.docuseal.co/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:3000]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

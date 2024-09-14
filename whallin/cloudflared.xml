@@ -14,8 +14,8 @@ Cloudflared requires:&#xD;
     <Registry>https://hub.docker.com/r/cloudflare/cloudflared</Registry>
     <Project>https://github.com/cloudflare/cloudflared</Project>
     <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>tunnel --no-autoupdate run --token TUNNEL_TOKEN</PostArgs>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
     <Network>host</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

@@ -11,7 +11,7 @@
     <Project>https://handbrake.fr/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:5800]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

@@ -15,7 +15,7 @@ Jellyfin requires:&#xD;
     <Project>https://jellyfin.org/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8096]/</WebUI>
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

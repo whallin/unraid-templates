@@ -11,7 +11,7 @@
     <Project>https://gotenberg.dev/</Project>
     <!-- Docker settings -->
     <PostArgs>gotenberg --chromium-disable-javascript=true --chromium-allow-list=file:///tmp/.*</PostArgs>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

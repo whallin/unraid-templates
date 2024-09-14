@@ -11,7 +11,7 @@
     <Project>https://nicotine-plus.org/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:6080]/</WebUI>
-    <ExtraParams>--no-healthcheck</ExtraParams>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

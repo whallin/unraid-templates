@@ -11,7 +11,7 @@
     <Project>https://excalidraw.com/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:80]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

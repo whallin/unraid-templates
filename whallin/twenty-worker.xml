@@ -14,7 +14,7 @@ Twenty Worker requires:&#xD;
     <Registry>https://hub.docker.com/r/twentycrm/twenty</Registry>
     <Project>https://twenty.com/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>yarn worker:prod</PostArgs>
     <Network>bridge</Network>
     <Privileged>false</Privileged>

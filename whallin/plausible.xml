@@ -16,7 +16,7 @@ Plausible requires:&#xD;
     <Project>https://plausible.io/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>sh -c "sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db createdb &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; /entrypoint.sh run"</PostArgs>
     <Network>bridge</Network>
     <Privileged>false</Privileged>

@@ -14,7 +14,7 @@ Pawns requires:&#xD;
     <Registry>https://hub.docker.com/r/iproyal/pawns-cli</Registry>
     <Project>https://pawns.app/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>-email=ACCOUNT_EMAIL -password=ACCOUNT_PASS -device-name=DEVICE_NAME -accept-tos</PostArgs>
     <Network>host</Network>
     <Privileged>false</Privileged>

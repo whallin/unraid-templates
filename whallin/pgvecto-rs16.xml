@@ -10,7 +10,7 @@
     <Registry>https://hub.docker.com/r/tensorchord/pgvecto-rs</Registry>
     <Project>https://pgvecto.rs/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

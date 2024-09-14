@@ -23,7 +23,7 @@ EarnApp requires:&#xD;
         <TagDescription>Smaller image, requires manual UUID generation</TagDescription>
     </Branch>
     <!-- Docker settings -->
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>host</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

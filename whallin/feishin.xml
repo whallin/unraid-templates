@@ -14,7 +14,7 @@ Feishin requires:&#xD;
     <Project>https://github.com/jeffvli/feishin</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:9180]/</WebUI>
-    <ExtraParams>--init --no-healthcheck</ExtraParams>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

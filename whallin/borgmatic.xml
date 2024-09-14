@@ -13,8 +13,8 @@ Borgmatic requires:&#xD;
     <Registry>https://github.com/borgmatic-collective/docker-borgmatic/pkgs/container/borgmatic</Registry>
     <Project>https://torsion.org/borgmatic/</Project>
     <!-- Docker settings -->
-    <ExtraParams>--no-healthcheck</ExtraParams>
-    <Network>bridge</Network>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
+    <Network>host</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
     <Shell>bash</Shell>

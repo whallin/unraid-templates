@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Deprecated reason: Too many similiar templates on the CA -->
-    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-syncthing</Name>
     <Overview>Syncthing is a free and open source software that syncs files between two or more devices in real time, without a central server.</Overview>

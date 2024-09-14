@@ -14,9 +14,9 @@
     <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <PostArgs>rcd --rc-no-auth --rc-addr :5572 --rc-web-gui --rc-web-gui-no-open-browser</PostArgs>
     <Network>bridge</Network>
-    <Privileged>false</Privileged>
+    <Privileged>true</Privileged>
     <PrivilegedReq>false</PrivilegedReq>
-    <Shell>bash</Shell>
+    <Shell>sh</Shell>
     <!-- Template settings -->
     <GitHub>https://github.com/whallin/unraid-templates</GitHub>
     <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
@@ -28,5 +28,5 @@
     <Config Name="Rclone web UI port" Target="5572" Default="5572" Mode="tcp" Description="The TCP port Rclone listens on." Type="Port" Display="always" Required="true" Mask="false">5572</Config>
     <!-- Volumes -->
     <Config Name="Rclone data" Target="/data" Default="/mnt/user/appdata/wh-teldrive-rclone/data" Mode="rw" Description="The location where Rclone stores share data." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Rclone config" Target="/config/rclone" Default="/mnt/user/appdata/wh-teldrive-rclone/config" Mode="ro" Description="The location where Rclone stores its config." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Rclone config" Target="/config/rclone" Default="/mnt/user/appdata/wh-teldrive-rclone/config" Mode="rw" Description="The location where Rclone stores its config." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

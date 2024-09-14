@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Deprecated reason: Too many similiar templates on the CA -->
-    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-home-assistant</Name>
     <Overview>Open source home automation that puts local control and privacy first.</Overview>

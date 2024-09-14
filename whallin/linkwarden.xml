@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Deprecated reason: Too many similiar templates on the CA -->
-    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-linkwarden</Name>
     <Overview>Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and more.</Overview>

@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <!-- Deprecated reason: Removed from CA -->
-    <Deprecated>true</Deprecated>
     <!-- App info -->
     <Name>wh-containernursery</Name>
     <Overview>Puts Docker Containers to sleep and wakes them back up when they're needed.</Overview>

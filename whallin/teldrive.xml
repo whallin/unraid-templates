@@ -30,7 +30,7 @@ Teldrive requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/teldrive.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Teldrive web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port Teldrive listens on." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+    <Config Name="Teldrive web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port Teldrive listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Teldrive session database" Target="/session.db" Default="/mnt/user/appdata/wh-teldrive/session.db" Mode="rw" Description="The location where Teldrive stores its sessions." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Teldrive config" Target="/config.toml" Default="/mnt/user/appdata/wh-teldrive/config.toml" Mode="ro" Description="The location where Teldrive stores its config." Type="Path" Display="always" Required="true" Mask="false" />

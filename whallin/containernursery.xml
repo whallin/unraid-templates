@@ -23,10 +23,10 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/containernursery.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="ContainerNursery proxy port" Target="80" Default="80" Mode="tcp" Description="The TCP port ContainerNursery listens on." Type="Port" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="ContainerNursery proxy port" Target="80" Default="80" Mode="tcp" Description="The TCP port ContainerNursery listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="ContainerNursery storage" Target="/usr/src/app/config" Default="/mnt/user/appdata/wh-containernursery" Mode="rw" Description="The location where ContainerNursery stores its data." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="Docker daemon socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="An entry point for the Docker API." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+    <Config Name="Docker daemon socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="An entry point for the Docker API." Type="Path" Display="advanced" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="CN_LOG_LEVEL" Target="CN_LOG_LEVEL" Default="info|debug|warn|error" Mode="" Description="Sets the minimum log level." Type="Variable" Display="always" Required="true" Mask="false">info</Config>
+    <Config Name="CN_LOG_LEVEL" Target="CN_LOG_LEVEL" Default="info|debug|warn|error" Mode="" Description="Sets the minimum log level." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

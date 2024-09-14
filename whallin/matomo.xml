@@ -39,9 +39,9 @@ Matomo requires:&#xD;
     <!-- Volumes -->
     <Config Name="Matomo storage" Target="/var/www/html" Default="/mnt/user/appdata/wh-matomo" Mode="rw" Description="The location where Matomo stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="MATOMO_DATABASE_HOST" Target="MATOMO_DATABASE_HOST" Default="" Mode="" Description="The host where MySQL/MariaDB is running." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="MATOMO_DATABASE_USERNAME" Target="MATOMO_DATABASE_USERNAME" Default="" Mode="" Description="The username for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="MATOMO_DATABASE_PASSWORD" Target="MATOMO_DATABASE_PASSWORD" Default="" Mode="" Description="The password for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="MATOMO_DATABASE_DBNAME" Target="MATOMO_DATABASE_DBNAME" Default="matomo" Mode="" Description="The Matomo database name for your MySQL/MariaDB database" Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="MATOMO_DATABASE_ADAPTER" Target="MATOMO_DATABASE_ADAPTER" Default="mysql" Mode="" Description="The Matomo database adapter." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="MATOMO_DATABASE_HOST" Target="MATOMO_DATABASE_HOST" Default="" Mode="" Description="The host where MySQL/MariaDB is running." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="MATOMO_DATABASE_USERNAME" Target="MATOMO_DATABASE_USERNAME" Default="" Mode="" Description="The username for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="MATOMO_DATABASE_PASSWORD" Target="MATOMO_DATABASE_PASSWORD" Default="" Mode="" Description="The password for your MySQL/MariaDB user." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="MATOMO_DATABASE_DBNAME" Target="MATOMO_DATABASE_DBNAME" Default="matomo" Mode="" Description="The Matomo database name for your MySQL/MariaDB database" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="MATOMO_DATABASE_ADAPTER" Target="MATOMO_DATABASE_ADAPTER" Default="mysql" Mode="" Description="The Matomo database adapter." Type="Variable" Display="advanced" Required="true" Mask="false" />
 </Container>

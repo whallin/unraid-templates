@@ -26,15 +26,15 @@ Borgmatic requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/borgmatic.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Variables -->
-    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
-    <Config Name="BORG_RSH" Target="BORG_RSH" Default="" Mode="" Description="Your SSH parameters." Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="BORG_PASSPHRASE" Target="BORG_PASSPHRASE" Default="" Mode="" Description="Your Borg repository passphrase." Type="Variable" Display="always" Required="false" Mask="true"/>
-    <Config Name="BACKUP_CRON" Target="BACKUP_CRON" Default="0 1 * * *" Mode="" Description="Cron schedule to run Borgmatic." Type="Variable" Display="always" Required="false" Mask="false">0 1 * * *</Config>
-    <Config Name="RUN_ON_STARTUP" Target="RUN_ON_STARTUP" Default="true|false" Mode="" Description="Run borgmatic on startup." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="BORG_RSH" Target="BORG_RSH" Default="" Mode="" Description="Your SSH parameters." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="BORG_PASSPHRASE" Target="BORG_PASSPHRASE" Default="" Mode="" Description="Your Borg repository passphrase." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="BACKUP_CRON" Target="BACKUP_CRON" Default="0 1 * * *" Mode="" Description="Cron schedule to run Borgmatic." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="RUN_ON_STARTUP" Target="RUN_ON_STARTUP" Default="true|false" Mode="" Description="Run borgmatic on startup." Type="Variable" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
-    <Config Name="Borg repository" Target="/mnt/borg-repository" Default="/mnt/user/appdata/wh-borgmatic/repository" Mode="rw" Description="Mount your borg backup repository here." Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Borgmatic config" Target="/etc/borgmatic.d" Default="/mnt/user/appdata/wh-borgmatic/borgmatic.d" Mode="rw" Description="Where you need to create crontab.txt and your borgmatic config.yml" Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Borg config" Target="/root/.config/borg" Default="/mnt/user/appdata/wh-borgmatic/borg" Mode="rw" Description="The storage for Borg config and keyfiles. Remember to back up your keyfiles&#x2014;they are needed when encryption is disabled." Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Borg SSH" Target="/root/.ssh" Default="/mnt/user/appdata/wh-borgmatic/ssh" Mode="rw" Description="Mount your .ssh or create a new one with SSH keys for your remote repo locations." Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Borg cache" Target="/root/.cache/borg" Default="/mnt/user/appdata/wh-borgmatic/cache" Mode="rw" Description="A location to store the Borg chunk cache." Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Borg repository" Target="/mnt/borg-repository" Default="/mnt/user/appdata/wh-borgmatic/repository" Mode="rw" Description="Mount your borg backup repository here." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Borgmatic config" Target="/etc/borgmatic.d" Default="/mnt/user/appdata/wh-borgmatic/borgmatic.d" Mode="rw" Description="Where you need to create crontab.txt and your borgmatic config.yml" Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Borg config" Target="/root/.config/borg" Default="/mnt/user/appdata/wh-borgmatic/borg" Mode="rw" Description="The storage for Borg config and keyfiles. Remember to back up your keyfiles&#x2014;they are needed when encryption is disabled." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Borg SSH" Target="/root/.ssh" Default="/mnt/user/appdata/wh-borgmatic/ssh" Mode="rw" Description="Mount your .ssh or create a new one with SSH keys for your remote repo locations." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Borg cache" Target="/root/.cache/borg" Default="/mnt/user/appdata/wh-borgmatic/cache" Mode="rw" Description="A location to store the Borg chunk cache." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

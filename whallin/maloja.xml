@@ -24,10 +24,10 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/maloja.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Maloja web UI port" Target="42010" Default="42010" Mode="tcp" Description="The TCP port Maloja listens on." Type="Port" Display="always" Required="true" Mask="false">42010</Config>
+    <Config Name="Maloja web UI port" Target="42010" Default="42010" Mode="tcp" Description="The TCP port Maloja listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Maloja storage" Target="/mljdata" Default="/mnt/user/appdata/wh-maloja" Mode="rw" Description="The location where Maloja stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="MALOJA_FORCE_PASSWORD" Target="MALOJA_FORCE_PASSWORD" Default="/mljdata" Mode="" Description="Set an admin password for Maloja." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="MALOJA_DATA_DIRECTORY" Target="MALOJA_DATA_DIRECTORY" Default="/mljdata" Mode="" Description="Set the directory in the container where configuration folders/files should be located." Type="Variable" Display="advanced" Required="true" Mask="false">/mljdata</Config>
+    <Config Name="MALOJA_FORCE_PASSWORD" Target="MALOJA_FORCE_PASSWORD" Default="/mljdata" Mode="" Description="Set an admin password for Maloja." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="MALOJA_DATA_DIRECTORY" Target="MALOJA_DATA_DIRECTORY" Default="/mljdata" Mode="" Description="Set the directory in the container where configuration folders/files should be located." Type="Variable" Display="advanced" Required="true" Mask="false" />
 </Container>

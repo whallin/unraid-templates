@@ -37,7 +37,7 @@ EarnApp requires:&#xD;
     <Date>2000-01-01</Date>
     <!-- Volumes -->
     <Config Name="EarnApp storage" Target="/etc/earnapp" Default="/mnt/user/appdata/wh-earnapp" Mode="rw" Description="The location where EarnApp stores its data." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="EarnApp UUID" Target="/sys/fs/cgroup" Default="/sys/fs/cgroup" Mode="ro" Description="Read-only path for the container to generate a UUID." Type="Path" Display="advanced" Required="true" Mask="false">/sys/fs/cgroup</Config>
+    <Config Name="EarnApp UUID" Target="/sys/fs/cgroup" Default="/sys/fs/cgroup" Mode="ro" Description="Read-only path for the container to generate a UUID." Type="Path" Display="advanced" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="EARNAPP_UUID" Target="EARNAPP_UUID" Default="" Mode="" Description="Your manually generated UUID. (when using 'lite' image)" Type="Variable" Display="advanced" Required="false" Mask="false" />
 </Container>

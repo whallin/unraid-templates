@@ -33,10 +33,10 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/dbgate.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="DbGate web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DbGate listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="DbGate web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DbGate listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="DbGate storage" Target="/root/.dbgate" Default="/mnt/user/appdata/wh-dbgate" Mode="rw" Description="The location where DbGate stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="LOGIN" Target="LOGIN" Default="" Mode="" Description="Username for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Password for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="LOGIN" Target="LOGIN" Default="" Mode="" Description="Username for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Password for authenticating with DbGate." Type="Variable" Display="always" Required="false" Mask="true" />
 </Container>

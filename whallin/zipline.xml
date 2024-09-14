@@ -32,6 +32,6 @@ Zipline requires:&#xD;
     <Config Name="Zipline uploads" Target="/zipline/uploads" Default="/mnt/user/appdata/wh-zipline/uploads" Mode="rw" Description="The location where Zipline stores uploads." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Zipline public" Target="/zipline/public" Default="/mnt/user/appdata/wh-zipline/public" Mode="rw" Description="The location where Zipline stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="CORE_SECRET" Target="CORE_SECRET" Default="" Mode="" Description="Used to sign sensitive data." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="CORE_DATABASE_URL" Target="CORE_DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="CORE_SECRET" Target="CORE_SECRET" Default="" Mode="" Description="Used to sign sensitive data." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="CORE_DATABASE_URL" Target="CORE_DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

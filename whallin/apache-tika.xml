@@ -32,5 +32,5 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/apache-tika.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Tika port" Target="9998" Default="9998" Mode="tcp" Description="The TCP port Tika listens on." Type="Port" Display="always" Required="false" Mask="false">9998</Config>
+    <Config Name="Tika port" Target="9998" Default="9998" Mode="tcp" Description="The TCP port Tika listens on." Type="Port" Display="always" Required="false" Mask="false" />
 </Container>

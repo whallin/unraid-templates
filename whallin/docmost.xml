@@ -32,8 +32,8 @@ Docmost requires:&#xD;
     <!-- Volumes -->
     <Config Name="Docmost storage" Target="/app/data/storage" Default="/mnt/user/appdata/wh-docmost" Mode="rw" Description="The location where Docmost stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A random key used for application security." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="REDIS_URL" Target="REDIS_URL" Default="" Mode="" Description="The Redis connection URL, e.g. redis://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="The base URL of your application." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A random key used for application security." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="REDIS_URL" Target="REDIS_URL" Default="" Mode="" Description="The Redis connection URL, e.g. redis://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="The base URL of your application." Type="Variable" Display="always" Required="false" Mask="false" />
 </Container>

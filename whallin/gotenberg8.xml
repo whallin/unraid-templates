@@ -24,5 +24,5 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/gotenberg8.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Gotenberg port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Gotenberg listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="Gotenberg port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Gotenberg listens on." Type="Port" Display="always" Required="true" Mask="false" />
 </Container>

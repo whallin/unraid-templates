@@ -24,28 +24,28 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/npmplus.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="NPMplus web UI port" Target="81" Default="81" Mode="tcp" Description="The TCP port NPMplus listens on." Type="Port" Display="always" Required="true" Mask="false">81</Config>
-    <Config Name="GoAccess web UI port" Target="91" Default="91" Mode="tcp" Description="The TCP port GoAccess listens on." Type="Port" Display="always" Required="false" Mask="false">91</Config>
-    <Config Name="HTTP port" Target="80" Default="80" Mode="tcp" Description="The TCP port HTTP listens on." Type="Port" Display="always" Required="true" Mask="false">80</Config>
-    <Config Name="HTTPS port" Target="443" Default="443" Mode="tcp" Description="The TCP port HTTPS listens on." Type="Port" Display="always" Required="true" Mask="false">443</Config>
-    <Config Name="HTTP/3 port" Target="443" Default="443" Mode="udp" Description="The UDP port HTTP/3 listens on." Type="Port" Display="always" Required="true" Mask="false">443</Config>
+    <Config Name="NPMplus web UI port" Target="81" Default="81" Mode="tcp" Description="The TCP port NPMplus listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <Config Name="GoAccess web UI port" Target="91" Default="91" Mode="tcp" Description="The TCP port GoAccess listens on." Type="Port" Display="always" Required="false" Mask="false" />
+    <Config Name="HTTP port" Target="80" Default="80" Mode="tcp" Description="The TCP port HTTP listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <Config Name="HTTPS port" Target="443" Default="443" Mode="tcp" Description="The TCP port HTTPS listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <Config Name="HTTP/3 port" Target="443" Default="443" Mode="udp" Description="The UDP port HTTP/3 listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="NPMplus storage" Target="/data" Default="/mnt/user/appdata/wh-npmplus" Mode="rw" Description="The location where NPMplus stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
-    <Config Name="NGINX_LOG_NOT_FOUND" Target="NGINX_LOG_NOT_FOUND" Default="false|true" Mode="" Description="Allow logging of 404 errors." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="NGINX_404_REDIRECT" Target="NGINX_404_REDIRECT" Default="false|true" Mode="" Description="Redirect to '/' instead of showing a 404 error page" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="NGINX_DISABLE_PROXY_BUFFERING" Target="NGINX_DISABLE_PROXY_BUFFERING" Default="false|true" Mode="" Description="Disables the proxy-buffering option of nginx" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="SKIP_IP_RANGES" Target="SKIP_IP_RANGES" Default="false|true" Mode="" Description="Skip feteching/whitelisting IP ranges from AWS and Cloudflare." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="LOGROTATE" Target="LOGROTATE" Default="false|true" Mode="" Description="Enables writing HTTP access logs, stream access logs, and enables daily log rotation." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="LOGROTATIONS" Target="LOGROTATIONS" Default="7" Mode="" Description="Set how often the access.log should be rotated until it is deleted." Type="Variable" Display="always" Required="false" Mask="false">7</Config>
-    <Config Name="GOA" Target="GOA" Default="false|true" Mode="" Description="Enables GoAccess, requires LOGROTATE set to 'true'." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-    <Config Name="CLEAN" Target="CLEAN" Default="true|false" Mode="" Description="Clean folders" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="NGINX_LOG_NOT_FOUND" Target="NGINX_LOG_NOT_FOUND" Default="false|true" Mode="" Description="Allow logging of 404 errors." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="NGINX_404_REDIRECT" Target="NGINX_404_REDIRECT" Default="false|true" Mode="" Description="Redirect to '/' instead of showing a 404 error page" Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="NGINX_DISABLE_PROXY_BUFFERING" Target="NGINX_DISABLE_PROXY_BUFFERING" Default="false|true" Mode="" Description="Disables the proxy-buffering option of nginx" Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SKIP_IP_RANGES" Target="SKIP_IP_RANGES" Default="false|true" Mode="" Description="Skip feteching/whitelisting IP ranges from AWS and Cloudflare." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="LOGROTATE" Target="LOGROTATE" Default="false|true" Mode="" Description="Enables writing HTTP access logs, stream access logs, and enables daily log rotation." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="LOGROTATIONS" Target="LOGROTATIONS" Default="7" Mode="" Description="Set how often the access.log should be rotated until it is deleted." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="GOA" Target="GOA" Default="false|true" Mode="" Description="Enables GoAccess, requires LOGROTATE set to 'true'." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="CLEAN" Target="CLEAN" Default="true|false" Mode="" Description="Clean folders" Type="Variable" Display="advanced" Required="false" Mask="false" />
     <Config Name="CRT" Target="CRT" Default="36" Mode="" Description="The amount of hours between Certbot trying to renew your certificates." Type="Variable" Display="advanced" Required="false" Mask="false">36</Config>
-    <Config Name="IPRT" Target="IPRT" Default="3" Mode="" Description="The amount of hours between updating the IP ranges from AWS and Cloudflare." Type="Variable" Display="advanced" Required="false" Mask="false">3</Config>
-    <Config Name="GOACLA" Target="GOACLA" Default="--agent-list --real-os --double-decode --anonymize-ip --anonymize-level=1 --keep-last=30" Mode="" Description="Arguments that should be passed to GoAccess." Type="Variable" Display="advanced" Required="false" Mask="false">--agent-list --real-os --double-decode --anonymize-ip --anonymize-level=1 --keep-last=30</Config>
-    <Config Name="PHP82" Target="PHP82" Default="false|true" Mode="" Description="Activates PHP 8.2" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-    <Config Name="PHP82_APKS" Target="PHP82_APKS" Default="" Mode="" Description="Add PHP 8.2 extensions." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-    <Config Name="PHP83" Target="PHP83" Default="false|true" Mode="" Description="Activates PHP 8.3" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-    <Config Name="PHP83_APKS" Target="PHP83_APKS" Default="" Mode="" Description="Add PHP 8.3 extensions." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="IPRT" Target="IPRT" Default="3" Mode="" Description="The amount of hours between updating the IP ranges from AWS and Cloudflare." Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="GOACLA" Target="GOACLA" Default="--agent-list --real-os --double-decode --anonymize-ip --anonymize-level=1 --keep-last=30" Mode="" Description="Arguments that should be passed to GoAccess." Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PHP82" Target="PHP82" Default="false|true" Mode="" Description="Activates PHP 8.2" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PHP82_APKS" Target="PHP82_APKS" Default="" Mode="" Description="Add PHP 8.2 extensions." Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PHP83" Target="PHP83" Default="false|true" Mode="" Description="Activates PHP 8.3" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PHP83_APKS" Target="PHP83_APKS" Default="" Mode="" Description="Add PHP 8.3 extensions." Type="Variable" Display="advanced" Required="false" Mask="false" />
 </Container>

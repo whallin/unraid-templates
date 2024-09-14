@@ -28,7 +28,7 @@ MystNodes requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/mysterium-node.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="MystNode web UI port" Target="4449" Default="4449" Mode="tcp" Description="The TCP port MystNode listens on." Type="Port" Display="always" Required="true" Mask="false">4449</Config>
+    <Config Name="MystNode web UI port" Target="4449" Default="4449" Mode="tcp" Description="The TCP port MystNode listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="MystNode storage" Target="/var/lib/mysterium-node" Default="/mnt/user/appdata/wh-mysterium-node" Mode="rw" Description="The location where MystNode stores its data." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

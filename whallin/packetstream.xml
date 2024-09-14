@@ -26,5 +26,5 @@ PacketStream requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/packetstream.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Variables -->
-    <Config Name="CID" Target="CID" Default="" Mode="" Description="Your PacketStream referral code to register your machine for your PacketStream account." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="CID" Target="CID" Default="" Mode="" Description="Your PacketStream referral code to register your machine for your PacketStream account." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

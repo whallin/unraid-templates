@@ -28,11 +28,19 @@ DocuSeal requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/docuseal.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="DocuSeal web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DocuSeal listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="DocuSeal web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port DocuSeal listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="DocuSeal storage" Target="/data/docuseal" Default="/mnt/user/appdata/wh-docuseal" Mode="rw" Description="The location where DocuSeal stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="FORCE_SSL" Target="FORCE_SSL" Default="false|true" Mode="" Description="Toggle to enforce SSL." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-    <Config Name="HOST" Target="HOST" Default="" Mode="" Description="The domain name for your application." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="A secret key used for various security purposes in the application." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="FORCE_SSL" Target="FORCE_SSL" Default="false|true" Mode="" Description="Toggle to enforce SSL." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="HOST" Target="HOST" Default="" Mode="" Description="The domain name for your application." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_USERNAME" Target="SMTP_USERNAME" Default="" Mode="" Description="The username for the SMTP server for sending emails." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_ADDRESS" Target="SMTP_ADDRESS" Default="" Mode="" Description="The address of the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="The port for the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="The password for authenticating with the SMTP server." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="SMTP_AUTHENTICATION" Target="SMTP_AUTHENTICATION" Default="login|plain" Mode="" Description="The authentication method for the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_FROM" Target="SMTP_FROM" Default="" Mode="" Description="Email address to send emails from." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_ENABLE_STARTTLS_AUTO" Target="SMTP_ENABLE_STARTTLS_AUTO" Default="true|false" Mode="" Description="Pass false to disable STARTTLS." Type="Variable" Display="always" Required="false" Mask="false" />
 </Container>

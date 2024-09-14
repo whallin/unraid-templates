@@ -28,7 +28,7 @@
     <!-- Volumes -->
     <Config Name="ConvertX storage" Target="/app/data" Default="/mnt/user/appdata/wh-convertx" Mode="rw" Description="The location where ConvertX stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="JWT_SECRET" Target="JWT_SECRET" Default="" Mode="" Description="The token to sign the JSON web tokens." Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="JWT_SECRET" Target="JWT_SECRET" Default="" Mode="" Description="The token to sign the JSON web tokens." Type="Variable" Display="always" Required="true" Mask="true" />
     <Config Name="ACCOUNT_REGISTRATION" Target="ACCOUNT_REGISTRATION" Default="false|true" Mode="" Description="Toggles account registration, doesn't matter for the first account." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
     <Config Name="ALLOW_UNAUTHENTICATED" Target="ALLOW_UNAUTHENTICATED" Default="false|true" Mode="" Description="Allows anyone to use the service without logging in." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
     <Config Name="HTTP_ALLOWED" Target="HTTP_ALLOWED" Default="false|true" Mode="" Description="Allow access via HTTP." Type="Variable" Display="always" Required="true" Mask="false">false</Config>

@@ -24,7 +24,7 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/home-assistant.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Home Assistant web UI port" Target="8123" Default="8123" Mode="tcp" Description="The TCP port Home Assistant listens on." Type="Port" Display="always" Required="true" Mask="false">8123</Config>
+    <Config Name="Home Assistant web UI port" Target="8123" Default="8123" Mode="tcp" Description="The TCP port Home Assistant listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Home Assistant storage" Target="/config" Default="/mnt/user/appdata/wh-home-assistant" Mode="rw" Description="The location where Home Assistant stores its data." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

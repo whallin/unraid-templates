@@ -31,7 +31,7 @@
     <!-- Volumes -->
     <Config Name="2FAuth storage" Target="/2fauth" Default="/mnt/user/appdata/wh-2fauth" Mode="rw" Description="The location where 2FAuth stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="The encryption key for the database and sessions." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="SITE_OWNER" Target="SITE_OWNER" Default="" Mode="" Description=" This should be your email address." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="APP_URL" Target="APP_URL" Default="http://localhost" Mode="" Description="This must match your installations external address." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="The encryption key for the database and sessions." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="SITE_OWNER" Target="SITE_OWNER" Default="" Mode="" Description=" This should be your email address." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="APP_URL" Target="APP_URL" Default="http://localhost" Mode="" Description="This must match your installations external address." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

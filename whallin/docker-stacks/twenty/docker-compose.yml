@@ -1,0 +1,60 @@
+services:
+  change-vol-ownership:
+    container_name: twenty-change-vol-ownership
+    image: ubuntu:jammy
+    user: root
+    healthcheck:
+      disable: true
+    command: >
+      bash -c "
+      chown -R 1000:1000 /tmp/server-local-data
+      && chown -R 1000:1000 /tmp/docker-data"
+    volumes:
+      - /mnt/cache/appdata/twenty-server/local-data:/tmp/server-local-data
+      - /mnt/cache/appdata/twenty-server/docker:/tmp/docker-data
+
+  server:
+    container_name: twenty-server
+    image: twentycrm/twenty:latest
+    init: true
+    healthcheck:
+      disable: true
+    depends_on:
+      - postgres
+    ports:
+      - 4005:3000/tcp # HTTP web UI
+    volumes:
+      - /mnt/cache/appdata/twenty-server/local-data:/app/packages/twenty-server/.local-storage
+      - /mnt/cache/appdata/twenty-server/docker:/app/docker-data
+    env_file:
+      - .env
+    environment:
+      ENABLE_DB_MIGRATIONS: "true"
+
+  worker:
+    container_name: twenty-worker
+    image: twentycrm/twenty:latest
+    init: true
+    command: "yarn worker:prod"
+    healthcheck:
+      disable: true
+    depends_on:
+      - postgres
+      - server
+    env_file:
+      - .env
+    environment:
+      ENABLE_DB_MIGRATIONS: "false"
+
+  postgres:
+    container_name: twenty-postgres
+    image: twentycrm/twenty-postgres:latest
+    init: true
+    healthcheck:
+      disable: true
+    ports:
+      - 5001:5432/tcp # TCP listening
+    volumes:
+      - /mnt/cache/appdata/twenty-postgres:/bitnami/postgresql
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD}

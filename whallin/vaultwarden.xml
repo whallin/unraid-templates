@@ -28,19 +28,19 @@ Vaultwarden requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/vaultwarden.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Vaultwarden web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Vaultwarden listens on." Type="Port" Display="always" Required="true" Mask="false">80</Config>
+    <Config Name="Vaultwarden web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Vaultwarden listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Vaultwarden storage" Target="/data" Default="/mnt/user/appdata/wh-vaultwarden" Mode="rw" Description="The location where Vaultwarden stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="data/db.sqlite3" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false">data/db.sqlite3</Config>
-    <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="Token for the admin interface: https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#secure-the-admin_token" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="The domain must match the address from where you access the server." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Mode="" Description="Controls if new users can register." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-    <Config Name="ICON_REDIRECT_CODE" Target="ICON_REDIRECT_CODE" Default="302|301|307|308" Mode="" Description="The HTTP status code to use for redirects to an external icon service." Type="Variable" Display="advanced" Required="true" Mask="false">302</Config>
-    <Config Name="PUSH_ENABLED" Target="PUSH_ENABLED" Default="false|true" Mode="" Description="Enables push notifications. (requires key &amp;amp; ID from https://bitwarden.com/host)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-    <Config Name="PUSH_INSTALLATION_ID" Target="PUSH_INSTALLATION_ID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-    <Config Name="PUSH_INSTALLATION_KEY" Target="PUSH_INSTALLATION_KEY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="true"/>
-    <Config Name="PUSH_RELAY_URI" Target="PUSH_RELAY_URI" Default="https://push.bitwarden.com|https://api.bitwarden.eu" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">https://push.bitwarden.com</Config>
-    <Config Name="PUSH_IDENTITY_URI" Target="PUSH_IDENTITY_URI" Default="https://identity.bitwarden.com|https://identity.bitwarden.eu" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">https://identity.bitwarden.com</Config>
-    <Config Name="ENABLE_WEBSOCKET" Target="ENABLE_WEBSOCKET" Default="true|false" Mode="" Description="Enable websocket notifications." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="data/db.sqlite3" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="Token for the admin interface: https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#secure-the-admin_token" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="The domain must match the address from where you access the server." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Mode="" Description="Controls if new users can register." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="ICON_REDIRECT_CODE" Target="ICON_REDIRECT_CODE" Default="302|301|307|308" Mode="" Description="The HTTP status code to use for redirects to an external icon service." Type="Variable" Display="advanced" Required="true" Mask="false" />
+    <Config Name="PUSH_ENABLED" Target="PUSH_ENABLED" Default="false|true" Mode="" Description="Enables push notifications. (requires key &amp;amp; ID from https://bitwarden.com/host)" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PUSH_INSTALLATION_ID" Target="PUSH_INSTALLATION_ID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PUSH_INSTALLATION_KEY" Target="PUSH_INSTALLATION_KEY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="true" />
+    <Config Name="PUSH_RELAY_URI" Target="PUSH_RELAY_URI" Default="https://push.bitwarden.com|https://api.bitwarden.eu" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="PUSH_IDENTITY_URI" Target="PUSH_IDENTITY_URI" Default="https://identity.bitwarden.com|https://identity.bitwarden.eu" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="ENABLE_WEBSOCKET" Target="ENABLE_WEBSOCKET" Default="true|false" Mode="" Description="Enable websocket notifications." Type="Variable" Display="advanced" Required="true" Mask="false" />
 </Container>

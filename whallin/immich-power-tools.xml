@@ -30,11 +30,11 @@ Immich Power Tools requires:&#xD;
     <!-- Ports -->
     <Config Name="Immich Power Tools web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Immich Power Tools listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <!-- Variables -->
-    <Config Name="IMMICH_API_KEY" Target="IMMICH_API_KEY" Default="" Mode="" Description="The API key for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="IMMICH_URL" Target="IMMICH_URL" Default="" Mode="" Description="The URL to your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="The PostgreSQL hostname for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="IMMICH_API_KEY" Target="IMMICH_API_KEY" Default="" Mode="" Description="The API key for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="IMMICH_URL" Target="IMMICH_URL" Default="" Mode="" Description="The URL to your Immich instance." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="The PostgreSQL hostname for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="DB_PORT" Target="DB_PORT" Default="5432" Mode="" Description="The PostgreSQL port for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
-    <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="The PostgreSQL username for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="The PostgreSQL password for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DB_DATABASE_NAME" Target="DB_DATABASE_NAME" Default="" Mode="" Description="The PostgreSQL database name for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="The PostgreSQL username for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="The PostgreSQL password for your Immich instance." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="DB_DATABASE_NAME" Target="DB_DATABASE_NAME" Default="" Mode="" Description="The PostgreSQL database name for your Immich instance." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

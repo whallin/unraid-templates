@@ -27,8 +27,8 @@
     <!-- Volumes -->
     <Config Name="pgvecto-rs storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/wh-pgvecto-rs16" Mode="rw" Description="The location where pgvecto-rs stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This variable sets the pgvecto-rs superuser password." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="postgres" Mode="" Description="This variable creates a superuser and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="postgres" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This variable sets the pgvecto-rs superuser password." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="postgres" Mode="" Description="This variable creates a superuser and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="postgres" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="PGDATA" Target="PGDATA" Default="/var/lib/postgresql/data" Mode="" Description="This variable defines a subdirectory for the database files." Type="Variable" Display="advanced" Required="false" Mask="false">/var/lib/postgresql/data</Config>
 </Container>

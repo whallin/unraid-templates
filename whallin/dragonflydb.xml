@@ -27,7 +27,7 @@ DragonflyDB requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/dragonflydb.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="DragonflyDB port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port DragonflyDB listens on." Type="Port" Display="always" Required="false" Mask="false">6379</Config>
+    <Config Name="DragonflyDB port" Target="6379" Default="6379" Mode="tcp" Description="The TCP port DragonflyDB listens on." Type="Port" Display="always" Required="false" Mask="false" />
     <!-- Volumes -->
     <Config Name="DragonflyDB storage" Target="/data" Default="/mnt/user/appdata/wh-dragonflydb" Mode="rw" Description="The location where DragonflyDB stores its data." Type="Path" Display="always" Required="false" Mask="false" />
 </Container>

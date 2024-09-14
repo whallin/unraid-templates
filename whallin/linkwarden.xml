@@ -28,7 +28,7 @@
     <!-- Volumes -->
     <Config Name="Linkwarden storage" Target="/data/data" Default="/mnt/user/appdata/wh-linkwarden" Mode="rw" Description="The location where Linkwarden stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="NEXTAUTH_SECRET" Target="NEXTAUTH_SECRET" Default="" Mode="" Description="Secret phrase used by NextAuth." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="NEXTAUTH_SECRET" Target="NEXTAUTH_SECRET" Default="" Mode="" Description="Secret phrase used by NextAuth." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="NEXTAUTH_URL" Target="NEXTAUTH_URL" Default="http://localhost:3000/api/v1/auth" Mode="" Description="Change the variable to your domain name only if you are hosting Linkwarden elsewhere." Type="Variable" Display="advanced" Required="true" Mask="false">http://localhost:3000/api/v1/auth</Config>
 </Container>

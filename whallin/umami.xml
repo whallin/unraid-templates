@@ -38,9 +38,9 @@ Umami requires:&#xD;
     <!-- Ports -->
     <Config Name="Umami web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Umami listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <!-- Variables -->
-    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
-    <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A unique value for your installation." Type="Variable" Display="always" Required="true" Mask="true"/>
-    <Config Name="CLIENT_IP_HEADER" Target="CLIENT_IP_HEADER" Default="" Mode="" Description="HTTP header to check for the client's IP address." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A unique value for your installation." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="CLIENT_IP_HEADER" Target="CLIENT_IP_HEADER" Default="" Mode="" Description="HTTP header to check for the client's IP address." Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="TRACKER_SCRIPT_NAME" Target="TRACKER_SCRIPT_NAME" Default="script.js" Mode="" Description="Allows you to assign a custom name to the tracker script different from the default." Type="Variable" Display="advanced" Required="false" Mask="false">script.js</Config>
     <Config Name="DISABLE_LOGIN" Target="DISABLE_LOGIN" Default="0|1" Mode="" Description="Disables the login page for the application." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
     <Config Name="DISABLE_UPDATES" Target="DISABLE_UPDATES" Default="0|1" Mode="" Description="Disables the check for new versions of Umami." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>

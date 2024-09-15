@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-postiz</Name>
+    <Overview>Schedule social media posts, measure them, exchange with other members and get a lot of help from AI.</Overview>
+    <Category>Productivity: Tools: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Postiz requires:&#xD;
+- A PostgreSQL database.&#xD;
+- A Redis-compatibile database. (e.g. Redis, Valkey, KeyDB, DragonflyDB)</Requires>
+    <!-- Image settings -->
+    <Repository>ghcr.io/gitroomhq/postiz-app:latest</Repository>
+    <Registry>https://github.com/gitroomhq/postiz-app/pkgs/container/postiz-app</Registry>
+    <Project>https://postiz.com/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:4200]/</WebUI>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/postiz.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/postiz.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Postiz web UI port" Target="4200" Default="4200" Mode="tcp" Description="The TCP port Postiz listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <!-- Volumes -->
+    <Config Name="Postiz data" Target="/config" Default="/mnt/user/appdata/wh-postiz" Mode="rw" Description="The location where Postiz stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+</Container>

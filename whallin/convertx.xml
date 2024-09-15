@@ -24,12 +24,12 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/convertx.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="ConvertX web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port ConvertX listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="ConvertX web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port ConvertX listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="ConvertX storage" Target="/app/data" Default="/mnt/user/appdata/wh-convertx" Mode="rw" Description="The location where ConvertX stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="JWT_SECRET" Target="JWT_SECRET" Default="" Mode="" Description="The token to sign the JSON web tokens." Type="Variable" Display="always" Required="true" Mask="true" />
-    <Config Name="ACCOUNT_REGISTRATION" Target="ACCOUNT_REGISTRATION" Default="false|true" Mode="" Description="Toggles account registration, doesn't matter for the first account." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-    <Config Name="ALLOW_UNAUTHENTICATED" Target="ALLOW_UNAUTHENTICATED" Default="false|true" Mode="" Description="Allows anyone to use the service without logging in." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-    <Config Name="HTTP_ALLOWED" Target="HTTP_ALLOWED" Default="false|true" Mode="" Description="Allow access via HTTP." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+    <Config Name="ACCOUNT_REGISTRATION" Target="ACCOUNT_REGISTRATION" Default="false|true" Mode="" Description="Toggles account registration, doesn't matter for the first account." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="ALLOW_UNAUTHENTICATED" Target="ALLOW_UNAUTHENTICATED" Default="false|true" Mode="" Description="Allows anyone to use the service without logging in." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="HTTP_ALLOWED" Target="HTTP_ALLOWED" Default="false|true" Mode="" Description="Allow access via HTTP." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

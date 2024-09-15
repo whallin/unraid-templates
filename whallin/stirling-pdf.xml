@@ -41,13 +41,13 @@ Stirling-PDF requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/stirling-pdf.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Stirling-PDF web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port Stirling-PDF listens on." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+    <Config Name="Stirling-PDF web UI port" Target="8080" Default="8080" Mode="tcp" Description="The TCP port Stirling-PDF listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Stirling-PDF configs" Target="/configs" Default="/mnt/user/appdata/wh-stirling-pdf/configs" Mode="rw" Description="The location where Stirling-PDF stores its configs." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Stirling-PDF logs" Target="/logs" Default="/mnt/user/appdata/wh-stirling-pdf/logs" Mode="rw" Description="The location where Stirling-PDF stores its logs." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Stirling-PDF OCR training data" Target="/usr/share/tessdata" Default="/mnt/user/appdata/wh-stirling-pdf/tessdata" Mode="rw" Description="The location where Stirling-PDF stores its OCR training data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
-    <Config Name="DOCKER_ENABLE_SECURITY" Target="DOCKER_ENABLE_SECURITY" Default="false|true" Mode="" Description="Required as 'true' for login authentication." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-    <Config Name="INSTALL_BOOK_AND_ADVANCED_HTML_OPS" Target="INSTALL_BOOK_AND_ADVANCED_HTML_OPS" Default="false|true" Mode="" Description="Download Calibre to enable PDF &amp;lt;-&amp;gt; Book &amp;amp; advanced HTML conversion." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-    <Config Name="LANGS" Target="LANGS" Default="en_GB" Mode="" Description="Defines custom font libraries to install for use for document conversions." Type="Variable" Display="always" Required="true" Mask="false">en_GB</Config>
+    <Config Name="DOCKER_ENABLE_SECURITY" Target="DOCKER_ENABLE_SECURITY" Default="false|true" Mode="" Description="Required as 'true' for login authentication." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="INSTALL_BOOK_AND_ADVANCED_HTML_OPS" Target="INSTALL_BOOK_AND_ADVANCED_HTML_OPS" Default="false|true" Mode="" Description="Download Calibre to enable PDF &amp;lt;-&amp;gt; Book &amp;amp; advanced HTML conversion." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="LANGS" Target="LANGS" Default="en_GB" Mode="" Description="Defines custom font libraries to install for use for document conversions." Type="Variable" Display="always" Required="true" Mask="false" />
 </Container>

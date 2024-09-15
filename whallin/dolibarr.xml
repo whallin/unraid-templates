@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-dolibarr</Name>
+    <Overview>Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity.</Overview>
+    <Category>Productivity: Other:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Dolibarr requires:&#xD;
+- A MySQL-compatibile database.</Requires>
+    <!-- Image settings -->
+    <Repository>dolibarr/dolibarr:latest</Repository>
+    <Registry>https://hub.docker.com/r/dolibarr/dolibarr</Registry>
+    <Project>https://www.dolibarr.org/</Project>
+    <!-- Docker settings -->
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/dolibarr.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/dolibarr.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Dolibarr web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Dolibarr listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <!-- Volumes -->
+    <Config Name="Dolibarr documents" Target="/var/www/documents" Default="/mnt/user/appdata/wh-dolibarr/documents" Mode="rw" Description="The location where Dolibarr stores its documents." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Dolibarr custom data" Target="/var/www/html/custom" Default="/mnt/user/appdata/wh-dolibarr/custom" Mode="rw" Description="The location where Dolibarr stores custom data." Type="Path" Display="always" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="DOLI_DB_TYPE" Target="DOLI_DB_TYPE" Default="mysqli|pgsql" Mode="" Description="Type of the DB server." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DOLI_DB_HOST" Target="DOLI_DB_HOST" Default="mysql" Mode="" Description="Host name of the MariaDB/MySQL server." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DOLI_DB_HOST_PORT" Target="DOLI_DB_HOST_PORT" Default="3306" Mode="" Description="Host port of the MariaDB/MySQL server." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="DOLI_DB_USER" Target="DOLI_DB_USER" Default="doli" Mode="" Description="Database user." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DOLI_DB_PASSWORD" Target="DOLI_DB_PASSWORD" Default="doli_pass" Mode="" Description="Database user's password." Type="Variable" Display="always" Required="true" Mask="true" />
+    <Config Name="DOLI_DB_NAME" Target="DOLI_DB_NAME" Default="dolidb" Mode="" Description="Database name." Type="Variable" Display="always" Required="true" Mask="false" />
+</Container>

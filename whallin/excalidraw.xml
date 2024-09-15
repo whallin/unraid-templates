@@ -24,5 +24,5 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/excalidraw.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Excalidraw web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Excalidraw listens on." Type="Port" Display="always" Required="true" Mask="false">80</Config>
+    <Config Name="Excalidraw web UI port" Target="80" Default="80" Mode="tcp" Description="The TCP port Excalidraw listens on." Type="Port" Display="always" Required="true" Mask="false" />
 </Container>

@@ -23,12 +23,12 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/mariadb11.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="MariaDB port" Target5="3306" Default="3306" Mode="tcp" Description="The TCP port MariaDB listens on." Type="Port" Display="always" Required="false" Mask="false" />
+    <Config Name="MariaDB port" Target="3306" Default="3306" Mode="tcp" Description="The TCP port MariaDB listens on." Type="Port" Display="always" Required="false" Mask="false" />
     <!-- Volumes -->
     <Config Name="MariaDB storage" Target="/var/lib/mysql" Default="/mnt/user/appdata/wh-mariadb11" Mode="rw" Description="The location where MariaDB stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="MARIADB_ROOT_PASSWORD" Target="MARIADB_ROOT_PASSWORD" Default="" Mode="" Description="This variable sets the MariaDB root password." Type="Variable" Display="always" Required="true" Mask="true" />
     <Config Name="MARIADB_USER" Target="MARIADB_USER" Default="" Mode="" Description="This variable creates a default and a database with the same name." Type="Variable" Display="always" Required="false" Mask="false" />
-    <Config Name="MARIADB_PASSWORD" Target="MARIADB_PASSWORD" Default="postgres" Mode="" Description="This variable sets the password for the created user." Type="Variable" Display="always" Required="false" Mask="true" />
-    <Config Name="MARIADB_DATABASE" Target="MARIADB_DATABASE" Default="postgres" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MARIADB_PASSWORD" Target="MARIADB_PASSWORD" Default="" Mode="" Description="This variable sets the password for the created user." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="MARIADB_DATABASE" Target="MARIADB_DATABASE" Default="" Mode="" Description="This variable can define a different name for the default database created on the first start." Type="Variable" Display="always" Required="false" Mask="false" />
 </Container>

@@ -28,12 +28,20 @@ Docmost requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/docmost.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Docmost web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Docmost listens on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="Docmost web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Docmost listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Docmost storage" Target="/app/data/storage" Default="/mnt/user/appdata/wh-docmost" Mode="rw" Description="The location where Docmost stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
+    <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="The base URL of your application." Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="APP_SECRET" Target="APP_SECRET" Default="" Mode="" Description="A random key used for application security." Type="Variable" Display="always" Required="true" Mask="true" />
     <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="The database connection URL, e.g. postgres://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="REDIS_URL" Target="REDIS_URL" Default="" Mode="" Description="The Redis connection URL, e.g. redis://USER:PASS@HOST:PORT/DATABASE" Type="Variable" Display="always" Required="true" Mask="false" />
-    <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="The base URL of your application." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="smtp|postmark" Mode="" Description="The mail driver to use for sending emails." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="smtp.example.com" Mode="" Description="The SMTP server to use for sending emails." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="587" Mode="" Description="The port to use for the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_USERNAME" Target="SMTP_USERNAME" Default="" Mode="" Description="The username for the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="The password for the SMTP server." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="SMTP_SECURE" Target="SMTP_SECURE" Default="false|true" Mode="" Description="Use TLS when connecting to the server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="hello@example.com" Mode="" Description="The email address that emails will be sent from." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="DocMost" Mode="" Description="The name that emails will be sent from." Type="Variable" Display="always" Required="false" Mask="false" />
 </Container>

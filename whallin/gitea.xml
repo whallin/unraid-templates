@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <!-- App info -->
+    <Name>wh-gitea</Name>
+    <Overview>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD.</Overview>
+    <Category>Productivity: Backup: Cloud:</Category>
+    <Beta>false</Beta>
+    <Requires>
+Gitea requires:&#xD;
+- (Optional) A PostgreSQL or MySQL/MariaDB database.&#xD;
+    Gitea will fallback to SQLite if no database is provided.</Requires>
+    <!-- Image settings -->
+    <Repository>gitea/gitea:latest-rootless</Repository>
+    <Registry>https://hub.docker.com/r/gitea/gitea/</Registry>
+    <Project>https://about.gitea.com/</Project>
+    <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <PrivilegedReq>false</PrivilegedReq>
+    <Shell>bash</Shell>
+    <!-- Template settings -->
+    <GitHub>https://github.com/whallin/unraid-templates</GitHub>
+    <ReadMe>https://github.com/whallin/unraid-templates</ReadMe>
+    <Support>https://github.com/whallin/unraid-templates/issues</Support>
+    <Icon>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/imgs/gitea.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/gitea.xml</TemplateURL>
+    <Date>2000-01-01</Date>
+    <!-- Ports -->
+    <Config Name="Gitea web UI port" Target="3000" Default="3000" Mode="tcp" Description="The TCP port Gitea listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <Config Name="Gitea SSH daemon port" Target="2222" Default="2222" Mode="tcp" Description="The TCP port Gitea SSH listens on." Type="Port" Display="always" Required="true" Mask="false" />
+    <!-- Volumes -->
+    <Config Name="Gitea configs" Target="/etc/gitea" Default="/mnt/user/appdata/wh-gitea/config" Mode="rw" Description="The location where Gitea stores its configs." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Gitea data" Target="/var/lib/gitea" Default="/mnt/user/appdata/wh-gitea/data" Mode="rw" Description="The location where Gitea stores its data." Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Timezone mapping" Target="/etc/timezone" Default="/etc/timezone" Mode="ro" Description="" Type="Path" Display="advanced" Required="true" Mask="false" />
+    <Config Name="Local time mapping" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="" Type="Path" Display="advanced" Required="true" Mask="false" />
+    <!-- Variables -->
+    <Config Name="GITEA__database__DB_TYPE" Target="GITEA__database__DB_TYPE" Default="sqlite3|mysql|postgres|mssql" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="GITEA__database__HOST" Target="GITEA__database__HOST" Default="" Mode="" Description="Database host address and port or absolute path for unix socket." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="GITEA__database__NAME" Target="GITEA__database__NAME" Default="gitea" Mode="" Description="Database name." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="GITEA__database__USER" Target="GITEA__database__USER" Default="gitea" Mode="" Description="Database username." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="GITEA__database__PASSWD" Target="GITEA__database__PASSWD" Default="" Mode="" Description="Database user password." Type="Variable" Display="always" Required="false" Mask="true" />
+</Container>

@@ -24,7 +24,7 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/actual-budget.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Actual web UI port" Target="5006" Default="5006" Mode="tcp" Description="The TCP port Actual listens on." Type="Port" Display="always" Required="true" Mask="false">5006</Config>
+    <Config Name="Actual web UI port" Target="5006" Default="5006" Mode="tcp" Description="The TCP port Actual listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Actual storage" Target="/data" Default="/mnt/user/appdata/wh-actual" Mode="rw" Description="The location where Actual stores its data." Type="Path" Display="always" Required="true" Mask="false" />
 </Container>

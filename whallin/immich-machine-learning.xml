@@ -40,16 +40,16 @@ Immich Machine Learning requires:&#xD;
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/immich-machine-learning.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Immich machine learning port" Target="3003" Default="3003" Mode="tcp" Description="The TCP port Immich Machine Learning listens on." Type="Port" Display="always" Required="true" Mask="false">3003</Config>
+    <Config Name="Immich machine learning port" Target="3003" Default="3003" Mode="tcp" Description="The TCP port Immich Machine Learning listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Immich Machine Learning cache" Target="/cache" Default="/mnt/user/appdata/wh-immich-machine-learning" Mode="rw" Description="The location where Immich stores its machine learning cache." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="OpenVINO devices" Target="" Default="" Mode="" Description="Used for OpenVINO accelerated machine learning." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
-    <Config Name="OpenVINO volume" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="Used for OpenVINO accelerated machine learning." Type="Path" Display="advanced" Required="false" Mask="false">/dev/bus/usb</Config>
+    <Config Name="OpenVINO devices" Target="" Default="/dev/dri" Mode="" Description="Used for OpenVINO accelerated machine learning." Type="Device" Display="advanced" Required="false" Mask="false" />
+    <Config Name="OpenVINO volume" Target="/dev/bus/usb" Default="/dev/bus/usb" Mode="rw" Description="Used for OpenVINO accelerated machine learning." Type="Path" Display="advanced" Required="false" Mask="false" />
     <!-- Variables -->
-    <Config Name="MACHINE_LEARNING_MODEL_TTL" Target="MACHINE_LEARNING_MODEL_TTL" Default="300" Mode="" Description="Inactivity time (in seconds) before a model is unloaded." Type="Variable" Display="always" Required="false" Mask="false">300</Config>
-    <Config Name="MACHINE_LEARNING_MODEL_TTL_POLL_S" Target="MACHINE_LEARNING_MODEL_TTL_POLL_S" Default="10" Mode="" Description="Interval (in seconds) between checks for the model." Type="Variable" Display="always" Required="false" Mask="false">10</Config>
-    <Config Name="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Default="1" Mode="" Description="Number of parallel model operations." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
-    <Config Name="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Default="2" Mode="" Description="Number of threads for each model operation." Type="Variable" Display="always" Required="false" Mask="false">2</Config>
-    <Config Name="MACHINE_LEARNING_WORKERS" Target="MACHINE_LEARNING_WORKERS" Default="1" Mode="" Description="Number of worker processes to spawn." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
-    <Config Name="MACHINE_LEARNING_WORKER_TIMEOUT" Target="MACHINE_LEARNING_WORKER_TIMEOUT" Default="120" Mode="" Description="Maximum time (in seconds) of unresponsiveness before a worker is killed. (change to 300 for OpenVINO)" Type="Variable" Display="always" Required="false" Mask="false">120</Config>
+    <Config Name="MACHINE_LEARNING_MODEL_TTL" Target="MACHINE_LEARNING_MODEL_TTL" Default="300" Mode="" Description="Inactivity time (in seconds) before a model is unloaded." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MACHINE_LEARNING_MODEL_TTL_POLL_S" Target="MACHINE_LEARNING_MODEL_TTL_POLL_S" Default="10" Mode="" Description="Interval (in seconds) between checks for the model." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTER_OP_THREADS" Default="1" Mode="" Description="Number of parallel model operations." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Target="MACHINE_LEARNING_MODEL_INTRA_OP_THREADS" Default="2" Mode="" Description="Number of threads for each model operation." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MACHINE_LEARNING_WORKERS" Target="MACHINE_LEARNING_WORKERS" Default="1" Mode="" Description="Number of worker processes to spawn." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MACHINE_LEARNING_WORKER_TIMEOUT" Target="MACHINE_LEARNING_WORKER_TIMEOUT" Default="120" Mode="" Description="Maximum time (in seconds) of unresponsiveness before a worker is killed. (change to 300 for OpenVINO)" Type="Variable" Display="always" Required="false" Mask="false" />
 </Container>

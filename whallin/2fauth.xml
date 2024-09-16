@@ -27,11 +27,22 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/2fauth.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="2FAuth web UI port" Target="8000" Default="8000" Mode="tcp" Description="The TCP port 2FAuth listens on." Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+    <Config Name="2FAuth web UI port" Target="8000" Default="8000" Mode="tcp" Description="The TCP port 2FAuth listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="2FAuth storage" Target="/2fauth" Default="/mnt/user/appdata/wh-2fauth" Mode="rw" Description="The location where 2FAuth stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <!-- Variables -->
     <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="The encryption key for the database and sessions." Type="Variable" Display="always" Required="true" Mask="true" />
-    <Config Name="SITE_OWNER" Target="SITE_OWNER" Default="" Mode="" Description=" This should be your email address." Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="APP_URL" Target="APP_URL" Default="http://localhost" Mode="" Description="This must match your installations external address." Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="mysql|pgsql|sqlsrv|sqlite" Mode="" Description="The database driver to be used." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="" Mode="" Description="A single URL that contains all of the connection information for the database." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_MAILER" Target="MAIL_MAILER" Default="smtp|sendmail|mailgun|ses|ses-v2|postmark|log|failover" Mode="" Description="The default mailer that is used to send email messages." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="" Mode="" Description="Username used to connect to the SMTP server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="" Mode="" Description="Password used to connect to the SMTP server." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="tls" Mode="" Description="Encryption protocol used to secure email delivery." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="smtp.mailtrap.io" Mode="" Description="Domain of the mail server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="587" Mode="" Description="Port used to communicate with the mail server." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="Example" Mode="" Description="Name that is used globally for all e-mails that are sent by 2FAuth." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="hello@example.com" Mode="" Description="Address that is used globally for all e-mails that are sent by 2FAuth." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="CACHE_DRIVER" Target="CACHE_DRIVER" Default="file|database|apc" Mode="" Description="The default cache store used by 2FAuth when executing caching functions." Type="Variable" Display="advanced" Required="false" Mask="false" />
+    <Config Name="SESSION_DRIVER" Target="SESSION_DRIVER" Default="file|apc|cookie|array" Mode="" Description="The default cache store used by 2FAuth when executing caching functions." Type="Variable" Display="advanced" Required="false" Mask="false" />
 </Container>

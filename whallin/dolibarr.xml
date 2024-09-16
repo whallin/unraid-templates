@@ -7,12 +7,13 @@
     <Beta>false</Beta>
     <Requires>
 Dolibarr requires:&#xD;
-- A MySQL-compatibile database.</Requires>
+- A MySQL/MariaDB database..</Requires>
     <!-- Image settings -->
     <Repository>dolibarr/dolibarr:latest</Repository>
     <Registry>https://hub.docker.com/r/dolibarr/dolibarr</Registry>
     <Project>https://www.dolibarr.org/</Project>
     <!-- Docker settings -->
+    <WebUI>http://[IP]:[PORT:80]/</WebUI>
     <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
@@ -33,7 +34,7 @@ Dolibarr requires:&#xD;
     <!-- Variables -->
     <Config Name="DOLI_DB_TYPE" Target="DOLI_DB_TYPE" Default="mysqli|pgsql" Mode="" Description="Type of the DB server." Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="DOLI_DB_HOST" Target="DOLI_DB_HOST" Default="mysql" Mode="" Description="Host name of the MariaDB/MySQL server." Type="Variable" Display="always" Required="true" Mask="false" />
-    <Config Name="DOLI_DB_HOST_PORT" Target="DOLI_DB_HOST_PORT" Default="3306" Mode="" Description="Host port of the MariaDB/MySQL server." Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="DOLI_DB_HOST_PORT" Target="DOLI_DB_HOST_PORT" Default="3306" Mode="" Description="Host port of the MariaDB/MySQL server." Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="DOLI_DB_USER" Target="DOLI_DB_USER" Default="doli" Mode="" Description="Database user." Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="DOLI_DB_PASSWORD" Target="DOLI_DB_PASSWORD" Default="doli_pass" Mode="" Description="Database user's password." Type="Variable" Display="always" Required="true" Mask="true" />
     <Config Name="DOLI_DB_NAME" Target="DOLI_DB_NAME" Default="dolidb" Mode="" Description="Database name." Type="Variable" Display="always" Required="true" Mask="false" />

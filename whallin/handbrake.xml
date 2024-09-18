@@ -24,15 +24,15 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/handbrake.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="HandBrake web UI port" Target="5800" Default="5800" Mode="tcp" Description="The TCP port HandBrake listens on." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+    <Config Name="HandBrake web UI port" Target="5800" Default="5800" Mode="tcp" Description="The TCP port HandBrake listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="HandBrake storage" Target="/config" Default="/mnt/user/appdata/wh-handbrake" Mode="rw" Description="The location where HandBrake stores its data." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="HandBrake Input" Target="/storage" Default="/mnt/user/media/wh-handbrake/input" Mode="ro" Description="The location where HandBrake finds your fiels." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="HandBrake Output" Target="/output" Default="/mnt/user/media/wh-handbrake/output" Mode="rw" Description="The location where HandBrake stores your converted files." Type="Path" Display="always" Required="true" Mask="false" />
-    <Config Name="GL support in VNC" Target="" Default="" Mode="" Description="Mount for DRI3 GPU Acceleration." Type="Device" Display="advanced" Required="false" Mask="false">/dev/dri</Config>
+    <Config Name="GL support in VNC" Target="" Default="" Mode="" Description="Mount for DRI3 GPU Acceleration." Type="Device" Display="advanced" Required="false" Mask="false" />
     <!-- Variables -->
-    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false">Etc/UTC</Config>
-    <Config Name="WEB_AUTHENTICATION" Target="WEB_AUTHENTICATION" Default="0|1" Mode="" Description="Toggle HTTP Basic auth." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-    <Config Name="WEB_AUTHENTICATION_USERNAME" Target="WEB_AUTHENTICATION_USERNAME" Default="abc" Mode="" Description="HTTP Basic auth username." Type="Variable" Display="always" Required="false" Mask="false">abc</Config>
-    <Config Name="WEB_AUTHENTICATION_PASSWORD" Target="WEB_AUTHENTICATION_PASSWORD" Default="abc" Mode="" Description="HTTP Basic auth password, if unset, there will be no auth." Type="Variable" Display="always" Required="false" Mask="true">abc</Config>
+    <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Specify a timezone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="WEB_AUTHENTICATION" Target="WEB_AUTHENTICATION" Default="0|1" Mode="" Description="Toggle HTTP Basic auth." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="WEB_AUTHENTICATION_USERNAME" Target="WEB_AUTHENTICATION_USERNAME" Default="abc" Mode="" Description="HTTP Basic auth username." Type="Variable" Display="always" Required="false" Mask="false" />
+    <Config Name="WEB_AUTHENTICATION_PASSWORD" Target="WEB_AUTHENTICATION_PASSWORD" Default="abc" Mode="" Description="HTTP Basic auth password, if unset, there will be no auth." Type="Variable" Display="always" Required="false" Mask="true" />
 </Container>

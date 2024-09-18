@@ -14,7 +14,7 @@ ProjectSend requires:&#xD;
     <Project>https://projectsend.org/</Project>
     <!-- Docker settings -->
     <WebUI>http://[IP]:[PORT:80]/</WebUI>
-    <ExtraParams>--init --no-healthcheck --restart=always</ExtraParams>
+    <ExtraParams>--no-healthcheck --restart=always</ExtraParams>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <PrivilegedReq>false</PrivilegedReq>

@@ -24,7 +24,7 @@
     <TemplateURL>https://raw.githubusercontent.com/whallin/unraid-templates/main/whallin/stash.xml</TemplateURL>
     <Date>2000-01-01</Date>
     <!-- Ports -->
-    <Config Name="Stash web UI port" Target="9999" Default="9999" Mode="tcp" Description="The TCP port Stash listens on." Type="Port" Display="always" Required="true" Mask="false">9999</Config>
+    <Config Name="Stash web UI port" Target="9999" Default="9999" Mode="tcp" Description="The TCP port Stash listens on." Type="Port" Display="always" Required="true" Mask="false" />
     <!-- Volumes -->
     <Config Name="Stash media" Target="/data" Default="/mnt/user/media/wh-stash" Mode="rw" Description="The location where Stash stores your media." Type="Path" Display="always" Required="true" Mask="false" />
     <Config Name="Stash config" Target="/root/.stash" Default="/mnt/user/appdata/wh-stash/root" Mode="rw" Description="The location where Stash stores its configs." Type="Path" Display="always" Required="true" Mask="false" />
